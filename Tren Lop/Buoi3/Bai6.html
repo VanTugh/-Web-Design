@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header
+        {
+            color: rgb(29, 185, 133);
+            text-align: center;
+        }
+        body
+        {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: left;
+        margin-top: 50px;
+        }
+        .main
+        {
+            width: 500px;
+            border: 1px solid black;
+            box-shadow: 10px 10px rgba(32, 29, 29, 0.3) ;
+        }
+        .mon {
+        font-weight: bold;
+      }
+      p
+      {
+        padding: 10px 10px;
+      }
+        .nghieng
+        {
+            font-style: italic;
+        }
+        .red
+        {
+            color: red;
+        }
+        .code
+        {
+            background-color: rgb(219, 236, 245);
+            color: rgb(92, 92, 223);
+            text-align: center;
+            padding: 10px;
+            font-family: monospace;
+        }
+        #line2 {
+        display: inline-block;
+        margin-left: 40px;
+      }
+      .code :last-child{
+        display: inline-block;
+        margin-right: 80px;
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+        <h2>Dinh dang van ban</h2>
+    </header>
+        <p>
+            <span class="mon"><ins>Hoa hoc:
+            </ins></span> 
+            <span class="nghieng"> Nuoc:</span> <span class="red">H <sub>2</sub>O</span><span>
+            ; </span><span class="nghieng"> Axit sunfuric: </span><span class="red">H<sub>2</sub>SO<sub>4</sub></span>
+        </p>
+        <p class>
+            <span class="mon"><ins>Toan hoc:</ins></span>
+            <span class="nghieng"> Phuong trinh bac 2 : </span>
+            <span class="red">ax<sup>2</sup> + bx + c = 0</span>
+        </p>
+        <p>
+            <span class="mon">
+            <ins>Tin hoc : </ins></span><span class="nghieng"> Vong lap for </span>
+        </p> 
+        <div class="code">
+            <span>For i = 0 To 10</span><br /><br />
+            <span id="line2">Tong = Tong + 1</span><br /><br />
+            <span>Next</span>
+          </div>
+    </div>
+</body>
+</html>

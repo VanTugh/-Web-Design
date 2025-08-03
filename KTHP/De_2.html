@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1500px;
+      }
+      .head {
+        display: flex;
+      }
+      .logo img {
+        padding: 10px;
+        width: 100px;
+        height: 30px;
+      }
+      .cart {
+        width: 90%;
+        display: flex;
+        width: 1000px;
+        justify-content: right;
+        padding: 10px;
+      }
+      .cart img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding-right: 5px;
+      }
+      .cart p {
+        color: pink;
+      }
+      .menu {
+        background-color: rgb(254, 56, 89);
+      }
+      .menu ul {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+      }
+      .menu ul li a {
+        color: wheat;
+        text-decoration: none;
+      }
+      .search i {
+        background-color: yellow;
+        height: 20px;
+      }
+      .main {
+        display: flex;
+      }
+      .slide_bar {
+        width: 350px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+      .tieude {
+        display: flex;
+        padding: 10px;
+        background-color: yellow;
+      }
+      .tieude h2 {
+        padding-right: 60px;
+      }
+      .tieude i {
+        padding: 4px;
+      }
+      .slide_bar ul li {
+        list-style: none;
+        padding: 10px;
+        position: relative;
+      }
+      .slide_bar ul li a {
+        text-decoration: none;
+      }
+      .slide_bar ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        top: 0;
+        min-width: 120px;
+        left: 120px;
+      }
+      .slide_bar ul li:hover ul.dropdown {
+        display: block;
+      }
+      .top,
+      .bot {
+        display: flex;
+      }
+      .item {
+        display: flex;
+        margin: 50px;
+      }
+      .item img {
+        width: 200px;
+        height: 150px;
+        padding-right: 10px;
+      }
+      .item h3 {
+        color: red;
+        padding-top: 10px;
+      }
+      .stars {
+        color: yellow;
+        padding-top: 10px;
+      }
+      .new-price {
+        color: red;
+        font-style: italic;
+        font-size: 25px;
+        padding-top: 10px;
+      }
+      .old-price {
+        text-decoration: line-through;
+        padding-top: 10px;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+      }
+      footer img {
+        width: 30%;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="logo">
+        <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+      </div>
+      <div class="cart">
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+        <div class="text">
+          <h4>Cart</h4>
+          <p>0 item</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Brands</a></li>
+        <li><a href="">Gift Certificates</a></li>
+        <li><a href="">More</a></li>
+        <li>
+          <div class="search">
+            <input type="text" placeholder="Search.." />
+            <select>
+              <option value="">Categrories</option>
+              <option value="">1</option>
+              <option value="">2</option>
+            </select>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="slide_bar">
+        <div class="tieude">
+          <h2>CATEGORIES</h2>
+          <i class="fa-solid fa-list"></i>
+        </div>
+        <ul>
+          <li><a href="">Roses ></a></li>
+          <li>
+            <a href="">Flower Basket ></a>
+            <ul class="dropdown">
+              <li><a href="">Macs</a></li>
+              <li><a href="">Windows</a></li>
+            </ul>
+          </li>
+          <li><a href="">Gerberas ></a></li>
+          <li><a href="">Orchids</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="top">
+          <div class="item">
+            <img src="/BTVN/Bai2/parkchaeyoung.jpg" alt="" />
+            <div class="tt">
+              <h3>ALLQJnd QIdsjdbd BSHDkln</h3>
+              <div class="stars">★★★★★</div>
+              <div class="price">
+                <span class="new-price">$110.00</span>
+                <span class="old-price">$122.00</span>
+              </div>
+              <button>+ ADD to cart</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/BTVN/Bai2/parkchaeyoung.jpg" alt="" />
+            <div class="tt">
+              <h3>ALLQJnd QIdsjdbd BSHDkln</h3>
+              <div class="stars">★★★★★</div>
+              <div class="price">
+                <span class="new-price">$110.00</span>
+                <span class="old-price">$122.00</span>
+              </div>
+              <button>+ ADD to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="bot">
+          <div class="item">
+            <img src="/BTVN/Bai2/parkchaeyoung.jpg" alt="" />
+            <div class="tt">
+              <h3>ALLQJnd QIdsjdbd BSHDkln</h3>
+              <div class="stars">★★★★★</div>
+              <div class="price">
+                <span class="new-price">$110.00</span>
+                <span class="old-price">$122.00</span>
+              </div>
+              <button>+ ADD to cart</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/BTVN/Bai2/parkchaeyoung.jpg" alt="" />
+            <div class="tt">
+              <h3>ALLQJnd QIdsjdbd BSHDkln</h3>
+              <div class="stars">★★★★★</div>
+              <div class="price">
+                <span class="new-price">$110.00</span>
+                <span class="old-price">$122.00</span>
+              </div>
+              <button>+ ADD to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+      <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+      <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+    </footer>
+    <div class="scr">
+      <label for="">Ho va ten : </label>
+      <input type="text" id="fir" />
+      <label for="">Ten : </label>
+      <input type="text" id="last" />
+      <button onclick="hienthi()">Hien Thi</button>
+      <button onclick="huybo()">Huy Bo</button>
+    </div>
+    <script>
+      function hienthi() {
+        let input = document.getElementById("fir").value;
+        input = input.trim().toLowerCase().replace(/\s+/g, " ");
+        let words = input.split(" ");
+        for (let i = 0; i < words.length; i++) {
+          words[i] = words[i].charAt(0) + words[i].slice(1);
+        }
+        let ten = words[words.length - 1];
+        document.getElementById("last").value = ten;
+      }
+
+      function huybo() {
+        document.getElementById("fir").value = "";
+        document.getElementById("last").value = "";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ví dụ về các phương thức DOM</title>
+    <style>
+      .note {
+        padding: 5px;
+        border: 1px solid gray;
+      }
+      .highlight {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ví dụ 1: getElementById -->
+    <p id="demo">Hello</p>
+
+    <!-- Ví dụ 2: getElementsByTagName -->
+    <p>Đoạn 1</p>
+    <p>Đoạn 2</p>
+
+    <!-- Ví dụ 3: getElementsByClassName -->
+    <div class="note">Ghi chú 1</div>
+    <div class="note">Ghi chú 2</div>
+
+    <!-- Ví dụ 4: querySelectorAll -->
+    <p class="highlight">Đoạn nổi bật</p>
+    <p class="highlight">Đoạn khác</p>
+
+    <!-- Ví dụ 5: Truy cập qua tập các đối tượng -->
+    <a href="https://example.com">Link 1</a>
+    <a href="https://example.com">Link 2</a>
+
+    <script>
+      // Ví dụ 1: getElementById
+      document.getElementById("demo").innerHTML = "Xin chào!";
+
+      // Ví dụ 2: getElementsByTagName
+      let ps = document.getElementsByTagName("p");
+      ps[0].style.color = "red";
+
+      // Ví dụ 3: getElementsByClassName
+      let notes = document.getElementsByClassName("note");
+      notes[1].style.backgroundColor = "yellow";
+
+      // Ví dụ 4: querySelectorAll
+      let highlights = document.querySelectorAll(".highlight");
+      highlights[0].style.fontWeight = "bold";
+
+      // Ví dụ 5: Tập các đối tượng
+      let allLinks = document.links;
+      console.log("Số liên kết: " + allLinks.length);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+  color: aliceblue;
+  padding: 10px 20px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 8px 12px;
+  display: block;
+}
+
+/* Menu con */
+.menu ul li ul.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background-color: rgb(255, 29, 29);
+  min-width: 180px;
+}
+
+.menu ul li:hover ul.dropdown {
+  display: flex;
+}
+
+.menu ul li ul.dropdown li {
+  width: 100%;
+}
+
+.menu ul li ul.dropdown li a {
+  color: white;
+  padding: 10px;
+}
+
+.menu ul li ul.dropdown li a:hover {
+  background-color: #cc0000;
+}
+
+/* Ô tìm kiếm */
+.but {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.but input {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+}
+
+.title {
+  display: flex;
+  color: aliceblue;
+  background-color: brown;
+}
+.title i,
+h3 {
+  padding: 10px 20px;
+  font-size: 25px;
+}
+.tren {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  color: rgb(105, 18, 18);
+  padding: 10px;
+}
+.price {
+  display: flex;
+  font-size: 20px;
+  padding: 10px;
+}
+.item img {
+  width: 230px;
+  padding-bottom: 10px;
+}
+.item p {
+  padding-left: 5px;
+}
+.duoi {
+  display: flex;
+  justify-content: space-between;
+}

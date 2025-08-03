@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header img {
+        width: 100%;
+      }
+      .menu {
+        background-color: antiquewhite;
+      }
+      .menu ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        height: 100px;
+      }
+      .main {
+        background-color: rgb(91, 152, 205);
+        display: flex;
+      }
+      .menu a {
+        text-decoration: none;
+        color: rgb(1, 31, 56);
+        font-size: 48px;
+        padding: 23px 30px;
+      }
+      .menu li {
+        position: relative;
+      }
+      .menu li ul {
+        position: absolute;
+        display: none;
+        min-width: 200px;
+        padding: 0;
+        margin: 0;
+        background-color: lightyellow;
+      }
+      .menu li ul li a {
+        display: block;
+        padding: 10px 20px;
+        background-color: rgb(43, 121, 150); /* Đặt nền cho từng mục con */
+        color: rgb(1, 31, 56);
+        font-size: 24px;
+      }
+      .menu li ul li a:hover {
+        background-color: #4f6cbe; /* Màu khi hover */
+      }
+      .menu li a {
+        display: block;
+        font-weight: bold;
+      }
+      .menu li:hover {
+        background-color: beige;
+      }
+      .menu li:hover ul {
+        display: block;
+      }
+      .left {
+        display: flex;
+        text-align: center;
+        background-color: #4f6cbe;
+      }
+      .big_pic {
+        padding: 20px;
+      }
+      .big_pic h3 {
+        margin-bottom: 20px;
+      }
+      .small_pic {
+        display: flex;
+        flex-direction: column; /* sắp xếp theo chiều dọc */
+        gap: 10px;
+        padding: 20px;
+        width: 400px;
+      }
+      .item {
+        display: flex;
+        width: 250px;
+        height: auto;
+        text-align: center;
+        gap: 10px;
+      }
+      .item img {
+        width: 80px;
+        height: auto;
+      }
+      .content {
+        width: 40%;
+        height: 100%;
+      }
+      .content p {
+        padding: 12px;
+        text-align: center;
+        text-align: justify;
+        font-size: 24px;
+      }
+      .right {
+        flex: 1;
+        background-color: rgb(62, 62, 154);
+        display: flex;
+        flex-direction: column; /* xếp theo cột dọc */
+        align-items: center; /* căn giữa theo chiều ngang */
+        padding: 20px;
+      }
+      .box {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .box img {
+        width: 150px; /* tuỳ kích thước bạn muốn */
+        height: auto;
+        padding: 20px;
+      }
+      .box p {
+        font-size: 24px;
+      }
+      .title {
+        font-size: 48px;
+      }
+      footer {
+        background-color: #4f6cbe;
+        color: aliceblue;
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="/BTVN/Bai2/21406.jpg" alt="anh banner" />
+    </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="">mục 1</a></li>
+        <li><a href="">mục 2</a></li>
+        <li>
+          <a href="">mục 3</a>
+          <ul>
+            <li><a href="">mục nhỏ 1</a></li>
+            <li><a href="">mục nhỏ 2</a></li>
+            <li><a href="">mục nhỏ 3</a></li>
+            <li><a href="">mục nhỏ 1</a></li>
+            <li><a href="">mục nhỏ 2</a></li>
+            <li><a href="">mục nhỏ 3</a></li>
+            <li><a href="">mục nhỏ 1</a></li>
+            <li><a href="">mục nhỏ 2</a></li>
+            <li><a href="">mục nhỏ 3</a></li>
+            <li><a href="">mục nhỏ 1</a></li>
+            <li><a href="">mục nhỏ 2</a></li>
+            <li><a href="">mục nhỏ 3</a></li>
+            <li><a href="">mục nhỏ 1</a></li>
+          </ul>
+        </li>
+        <li><a href="">mục 4</a></li>
+        <li><a href="">mục 5</a></li>
+        <li><a href="">mục 6</a></li>
+        <li><a href="">mục 7</a></li>
+        <li><a href="">mục 8</a></li>
+      </ul>
+    </nav>
+    <div class="main">
+      <div class="left">
+        <div class="big_pic">
+          <h3 class="title">Mau anh 1</h3>
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <p>cau thu dep giai</p>
+        </div>
+        <div class="small_pic">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>cau thu dep giai</p>
+          </div>
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>cau thu dep giai</p>
+          </div>
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>cau thu dep giai</p>
+          </div>
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>cau thu dep giai</p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+          distinctio illo, accusantium, officiis quia eaque consectetur id
+          aliquam quae labore, alias culpa tempora. Tempora voluptas, laudantium
+          cum repellendus eaque assumenda? Dolor unde praesentium nam quas sit,
+          ducimus id ipsa delectus reiciendis alias minus labore, nihil
+          doloremque ipsum error nulla quidem repudiandae a saepe voluptate?
+          Nihil delectus repudiandae odit aperiam eveniet. Iusto fuga suscipit
+          dicta dolores amet vel facere, architecto exercitationem. Voluptatibus
+          tenetur consequuntur laborum cumque quos iste assumenda cum doloremque
+          magni quaerat, esse saepe inventore error, modi sequi quod veritatis.
+          Corporis ea fugiat error quos vero aperiam hic modi placeat sint,
+          aspernatur voluptas odit nulla excepturi nobis iure quis fuga esse
+          veniam deleniti labore itaque, obcaecati laboriosam quasi odio?
+          Deserunt. Ut cum sit placeat reprehenderit expedita provident
+          perspiciatis maxime soluta praesentium exercitationem quam atque
+          debitis dolore, totam nisi molestiae numquam odit sequi quod accusamus
+          officia velit iusto quo pariatur! Voluptatem. Deserunt reprehenderit
+          voluptatum tenetur totam ullam eveniet quis rerum quae beatae dolorem
+          quos a, cum pariatur unde perferendis commodi, veniam, obcaecati
+          aliquam. A laudantium quisquam deserunt sapiente amet vitae
+          voluptatum.
+        </p>
+      </div>
+
+      <div class="right">
+        <div class="title">
+          <h3>Mau anh 2</h3>
+        </div>
+
+        <div class="box">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <p>cau thu dep giai</p>
+        </div>
+        <div class="box">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <p>cau thu dep giai</p>
+        </div>
+      </div>
+    </div>
+    <footer class="end">Ban quyen thuoc ve Nguyen Van Tung</footer>
+  </body>
+</html>

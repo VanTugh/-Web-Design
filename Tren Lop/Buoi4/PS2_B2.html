@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .than {
+        width: 960px;
+        border: 1px solid pink;
+        background-color: rgba(231, 188, 195, 0.884);
+        margin: 2px auto;
+      }
+      .white {
+        color: aliceblue;
+      }
+      header {
+        height: 100px;
+        display: flex;
+        align-items: center;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .menu ul {
+        list-style: none;
+      }
+      .navy ul {
+        display: flex;
+        gap: 60px;
+      }
+      .navy ul li {
+        position: relative;
+      }
+      .navy li a {
+        text-decoration: none;
+      }
+      .navy ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        background-color: black;
+        flex-direction: column;
+        min-width: 150px;
+      }
+      .navy ul li:hover > a {
+        background-color: rgb(49, 31, 7);
+      }
+      .navy ul li:hover ul.dropdown {
+        display: block;
+        padding: 10px;
+      }
+      .slide_bar ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .slide_bar {
+        background-color: rgb(112, 13, 13);
+        width: 240px;
+        color: aliceblue;
+      }
+      .slide_bar li {
+        list-style: none;
+        padding: 10px;
+      }
+
+      .main {
+        display: flex;
+      }
+      .item h2,
+      .item p,
+      .item h4 {
+        padding: 10px;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="than">
+      <header>
+        <h1><span class="white">Slick</span>Red</h1>
+      </header>
+      <div class="menu">
+        <nav class="navy">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li class="cha">
+              <a href="">About</a>
+              <ul class="dropdown">
+                <li><a href="">phan tu 1</a></li>
+                <li><a href="">phan tu 2</a></li>
+              </ul>
+            </li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Design</a></li>
+            <li><a href="">Fix</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="main">
+        <div class="slide_bar">
+          <ul>
+            <li>Links</li>
+            <li>SEO</li>
+            <li>PHP</li>
+            <li>Ajax</li>
+            <li>JQuerry</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Internet Marketing</li>
+            <li>XHTML Templates</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+            eligendi debitis nostrum, quam dicta odio ullam nisi ipsam! Facilis
+            ea nam voluptatem est provident similique temporibus iusto maxime
+            sit error!
+          </h2>
+          <h4>Lorem ipsum, dolor sit amet.</h4>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+            nemo qui, eos facilis labore illo porro quisquam totam a in
+            repellendus asperiores voluptatibus, impedit, corrupti recusandae
+            eum magnam facere ducimus.
+          </p>
+          <h4>consectetur adipisicing eli</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            esse, laboriosam.
+          </p>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            officia voluptatem repellat facere minus, ea suscipit repudiandae
+            tempora ullam quasi dolor nesciunt debitis sequi praesentium enim
+            omnis animi iusto veritatis!
+          </p>
+        </div>
+      </div>
+      <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit.</footer>
+    </div>
+  </body>
+</html>

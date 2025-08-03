@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table , tr,th,td
+        {
+            border-collapse:co ;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+        <table>
+            <h2>
+                XEP HANG HOC TAP 2023
+            </h2>
+            <tr>
+                <th>Diem toan : </th>
+                <td><input type="number" id="toan"></td>
+            </tr>
+            <tr>
+                <th> Diem van :</th>
+                <td><input type="number" id="van"></td>
+            </tr>
+            <tr>
+                <th> Diem Ngoai Ngu :</th>
+                <td><input type="number" id="el"></td>
+            </tr>
+            <tr>
+                <th>Diem trung binh : </th>
+                <td><input type="text" id="tbinh"></td>
+            </tr>
+            <tr>
+                <th>Xep Hang :</th>
+                <td><input type="text" id="rank"></td>
+            </tr>
+            <tr>
+                <td><button onclick="myF()">Xep Hang</button></td>
+                <td><button onclick="del()">Xoa</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function myF()
+        {
+            var toan=parseFloat(document.getElementById("toan").value);
+            var van= parseFloat(document.getElementById("van").value);
+            var el =parseFloat(document.getElementById("el").value);
+            if( !isNaN(toan) && !isNaN(van) && !isNaN(el) &&
+                toan > 0 && toan <= 10 &&
+                van > 0 && van <= 10 &&
+                el > 0 && el <= 10            
+                )
+            {
+                var kq = (toan + van + el)/3;
+                if(kq<=5)
+                {
+                     document.getElementById("tbinh").value = kq;
+                     document.getElementById("rank").value = "Trung binh";
+                }
+                else if(kq> 5 && kq<=8)
+                {
+                    document.getElementById("tbinh").value = kq;
+                    document.getElementById("rank").value = "Kha";
+                }
+                else
+                {
+                    document.getElementById("tbinh").value = kq;
+                    document.getElementById("rank").value = "Gioi";
+                }
+                
+            }
+            else
+            {
+                alert(" nhap lai !");
+            }
+        }
+        function del()
+        {
+            document.getElementById("toan").value = "";
+            document.getElementById("van").value = "";
+            document.getElementById("el").value = "";
+            document.getElementById("tbinh").value = "";
+            document.getElementById("rank").value = "";
+        }
+    </script>
+</body>
+</html>

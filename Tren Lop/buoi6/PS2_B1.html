@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 200px;
+      }
+      #ketqua {
+        margin-left: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Giai phuong trinh bac 2</h2>
+    <table>
+      <tr>
+        <th>nhap vao a :</th>
+        <td><input type="number" id="a" /></td>
+      </tr>
+      <tr>
+        <th>nhap vao b :</th>
+        <td><input type="number" id="b" /></td>
+      </tr>
+      <tr>
+        <th>nhap vao c :</th>
+        <td><input type="number" id="c" /></td>
+      </tr>
+      <tr>
+        <td><button onclick="ADD()">KẾT QUẢ NÈ</button></td>
+        <td><p id="ketqua"></p></td>
+      </tr>
+    </table>
+
+    <script>
+      function ADD() {
+        const a = parseFloat(document.getElementById("a").value);
+        const b = parseFloat(document.getElementById("b").value);
+        const c = parseFloat(document.getElementById("c").value);
+        const ketqua = document.getElementById("ketqua");
+        if (a === 0) {
+          ketqua.innerText = "Đây không phải phương trình bậc 2.";
+          return;
+        }
+        const delta = b * b - 4 * a * c;
+        if (delta > 0) {
+          const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+          ketqua.innerText = `Phương trình có 2 nghiệm phân biệt: x1 = ${x1}, x2 = ${x2}`;
+        } else if (delta === 0) {
+          const x = -b / (2 * a);
+          ketqua.innerText = `Phương trình có nghiệm kép: x = ${x}`;
+        } else {
+          ketqua.innerText = "Phương trình vô nghiệm (delta < 0)";
+        }
+      }
+    </script>
+  </body>
+</html>

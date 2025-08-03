@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            width: 400px;
+        }
+        h2
+        {
+            background-color: rgb(224, 185, 149);
+            color: rgb(160, 89, 42);
+            text-align: center;
+        }
+        .tinh
+        {
+            background-color: rgb(240, 217, 195);
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+        <h2>DIEN TICH HINH CHU NHAT</h2>
+        <table> 
+            <tr>
+                <td> <label for="width">Chieu dai : </label></td>
+                <td> <input type="number"  id="height"></td>
+            </tr>
+            <tr>
+                <td> <label for="width">Chieu rong : </label> </td>
+                <td><input type="number" id="width"  ></td>
+            </tr>
+            <tr>
+                <td><label for="width">Dien tich : </label></td>
+                <td><input type="text"  id="result"> </td>
+            </tr>
+            <tr>
+                <td> <button onclick="Caculate() ">Tinh</button>
+                </td>
+            </tr>
+        </table>
+            
+        <script>
+            function Caculate()
+            {
+                var w= parseFloat(document.getElementById("width").value);
+                var h= parseFloat(document.getElementById("height").value);
+                if(!isNaN(w)&& !isNaN(h))
+                {
+                    var dientich= w*h;
+                    document.getElementById("result").value = dientich;
+                }
+                else
+                {
+                    document.write(" nhap lai !");
+                }
+            }
+        </script>
+           
+            
+            
+            
+           
+    </div>
+</body>
+</html>

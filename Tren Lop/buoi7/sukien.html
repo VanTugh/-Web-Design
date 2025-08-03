@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #demo {
+        width: 150px;
+        height: 50px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>check</p>
+    <input type="text" value="nhap vao day" onkeypress="myFun()" />
+    <p id="demo" onmouseout="FLIRT(this)" onmousemove="LOVE(this)"></p>
+    <script>
+      function myFun() {
+        alert(" can you love me ?");
+      }
+      function FLIRT(ob) {
+        ob.innerHTML = "Say What's up";
+        ob.style.color = "blue";
+      }
+      function LOVE(ob) {
+        ob.innerHTML = "Do u love me";
+        ob.style.color = "red";
+      }
+    </script>
+  </body>
+</html>

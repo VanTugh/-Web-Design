@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" style="align-items: center;">
+        <table>
+            <tr>
+                <td style="font-weight: bold; font-size: 20px;">Nhập số nguyên: </td>
+                <td><input type="text" class="in"></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: 20px;">Số chữ số lẻ: </td>
+                <td><input type="text" class="out"></td>
+            </tr>
+            <tr>
+                <td><button onclick="solve1(event)" type="submit">Đếm</button></td>
+                <td><button onclick="solve2()" type="submit">Hủy bỏ</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+
+    function solve1(event) {
+        if (event) event.preventDefault();
+        let inp = document.querySelector(".in").value;
+        const arr = inp.split('').map(Number);
+        let cnt = 0;
+        for (var i = 0; i < inp.length; i++) {
+            if (arr[i] % 2 != 0) cnt++;
+        }
+
+        document.querySelector(".out").value = cnt;
+    }
+
+    function solve2() {
+        document.querySelector(".in").value = "";
+        document.querySelector(".out").value = "";
+    }
+</script>
+
+</html>

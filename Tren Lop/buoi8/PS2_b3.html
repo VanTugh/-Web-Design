@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Nhap chuoi :</label>
+    <input type="text" id="chuoi" />
+    <br />
+    <label for="">Chuyen doi :</label>
+    <input type="text" id="ketqua" />
+    <button onclick="myf()">KiemTra</button>
+    <button onclick="Rex()">Rex</button>
+    <script>
+      function myf() {
+        var text = document.getElementById("chuoi").value;
+        var kq = "";
+        for (var i = 0; i < text.length; i++) {
+          var c = text[i];
+          if (c >= "A" && c <= "Z") {
+            kq += c.toLowerCase();
+          } else if (c >= "a" && c <= "z") {
+            kq += c.toUpperCase();
+          } else {
+            kq += c;
+          }
+        }
+        document.getElementById("ketqua").value = kq;
+      }
+      function Rex() {
+        var text = document.getElementById("chuoi").value;
+        var ketqua = text.replace(/[a-zA-Z]/g, function (c) {
+          return c == c.toLowerCase() ? c.toUpperCase() : c.toLowerCase();
+        });
+        document.getElementById("ketqua").value = ketqua;
+      }
+    </script>
+  </body>
+</html>

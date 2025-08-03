@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="di"></p>
+    <script>
+      // th1 :
+      var preson = { fisrtname: " Van Tugh", lastname: " Nguyen", age: 15 };
+
+      document.getElementById("demo").innerHTML =
+        preson.fisrtname +
+        " " +
+        preson.lastname +
+        " is " +
+        preson.age +
+        " year old";
+
+      // th2 :
+      var personnal = Object();
+      personnal.fisrtname = " DRT ";
+      personnal.lastname = " CDE ";
+      personnal.age = 21;
+
+      document.getElementById("di").innerHTML =
+        personnal.fisrtname +
+        " " +
+        personnal.lastname +
+        " is " +
+        personnal.age +
+        " year old";
+    </script>
+  </body>
+</html>

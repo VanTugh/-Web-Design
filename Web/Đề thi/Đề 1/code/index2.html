@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" id="username" required></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="password" required></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="submit" value="Kiểm tra Password" onclick="solve()"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function solve() {
+            let name = document.getElementById("username");
+            let pass = document.getElementById("password");
+            let pass_change = pass.value.split("");
+            let check1 = 0, check2 = 0;
+            if (pass_change.length >= 8) {
+                for (let i = 0; i < pass_change.length; i++) {
+                    if (pass_change[i] = pass_change[i].toUpperCase() && pass_change[i] != " ") check1++;;
+                }
+                // if (pass_change[0] - '0' > 9) check2 = true;
+                for (let i = 1; i <= 9; i++) {
+                    if (pass_change[0] == i) {
+                        check2++;
+                    }
+                }
+
+                if (check1 != 0 && check2 > 0) {
+                    alert("Nhập ok");
+                    return;
+                }
+            }
+            alert("Nhập lỗi");
+            // alert("check");
+        }
+
+    </script>
+</body>
+
+</html>

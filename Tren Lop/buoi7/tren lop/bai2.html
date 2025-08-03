@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body
+        {
+            width: 400px;
+            
+        }
+        h2
+        {
+            background-color: rgb(224, 185, 149);
+            color: rgb(160, 89, 42);
+            text-align: center;
+        }
+        .tinh
+        {
+            background-color: rgb(240, 217, 195);
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+
+        <table>
+            <h2>TINH CHU VI VA DIEN TICH HINH TRON</h2>
+            <tr>
+                <th>Ban Kinh :</th>
+                <td><input type="number" id="bkinh"></td>
+            </tr>
+            <tr>
+                <th>Dien tich</th>
+                <td><input type="text" id="dientich"></td>
+            </tr>
+            <tr>
+                <th>Chu vi</th>
+                <td><input type="text" id="chuvi"></td>
+            </tr>
+            <tr><td><button onclick="Caculate()">Tinh</button></td></tr>
+        </table>
+
+    </div>
+   
+    <script>
+        function Caculate()
+        {
+            var bk= parseFloat(document.getElementById("bkinh").value);
+            if(!isNaN(bk))
+            {
+                var dientich = 2*Math.PI *bk;
+                var chuvi= Math.PI *bk;
+                document.getElementById("dientich").value=dientich;
+                document.getElementById("chuvi").value= chuvi;
+            }
+            else
+                {
+                    document.write(" nhap lai !");
+                }
+        }
+    </script>
+    </script>
+</body>
+</html>

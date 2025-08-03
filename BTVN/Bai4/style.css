@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+header img {
+  width: 100%;
+}
+.menu {
+  background-color: antiquewhite;
+}
+.menu ul {
+  display: flex; /*  Biến danh sách <ul> trong menu thành một hàng ngang.
+  Mỗi <li> con sẽ nằm cạnh 
+  nhau theo chiều ngang thay vì xuống dòng như mặc định (block). */
+  justify-content: space-between;
+  padding: 20px;
+  text-decoration: none;
+  list-style: none;
+}
+.menu li {
+  position: relative; /* 
+   Để các ul con (menu thả xuống) có thể được định vị tương đối với thẻ cha <li> này. 
+   Khi dùng position: absolute cho menu con thì
+  nó sẽ dựa theo <li> để hiển thị đúng vị trí.
+  */
+}
+.menu li a {
+  text-decoration: none;
+  display: block; /*  Giúp thẻ <a> (liên kết) 
+  chiếm toàn bộ diện tích của li, dễ click hơn và có thể thêm padding/margin.
+   */
+  font-weight: bold;
+}
+.menu li:hover {
+  background-color: rgb(227, 221, 88);
+}
+.menu li:hover ul {
+  display: block; /*  
+  Khi người dùng rê chuột vào mục menu cha (li), 
+  menu con (ul) sẽ hiện ra bằng cách chuyển display từ none thành block.
+  */
+}
+.menu li ul {
+  position: absolute; /*  
+   Menu con sẽ được định vị chính xác (thường là dưới menu cha).
+    Kết hợp với position: relative ở cha (li) để tạo mối liên kết định vị. */
+  background-color: antiquewhite;
+  display: none; /*  Ẩn menu con khi trang mới load.
+   Chỉ khi hover vào li thì nó mới hiện ra nhờ đoạn số 4 bên trên. 
+  */
+  list-style: none;
+  min-width: 120px; /*  Đảm bảo menu con có chiều ngang tối thiểu là 120px, 
+  tránh bị quá nhỏ khi nội dung ngắn. */
+  padding: 20px;
+  border: 2px;
+}
+.menu li ul li {
+  padding: 10px;
+  text-align: left;
+}
+.main {
+  display: flex; /* 
+  Tạo layout 2 cột cho .left và .right. 
+  Nhờ flex, các phần tử con sẽ nằm ngang (trừ khi có flex-direction thay đổi).  */
+  background-color: rgb(213, 188, 155);
+  color: white;
+  padding: 20px;
+}
+.left {
+  flex: 1; /* Cả hai cột trái và phải chia đều chiều rộng, mỗi bên chiếm 50% trong container .main.  */
+}
+.right {
+  flex: 1; /* Cả hai cột trái và phải chia đều chiều rộng, mỗi bên chiếm 50% trong container .main.  */
+}
+.div1 img {
+  width: 100%;
+  max-width: 300px; /*   Ảnh trong .div1 sẽ có chiều ngang tối đa là 300px
+  , nhưng vẫn co lại nếu màn hình nhỏ hơn nhờ width: 100%. */
+  margin: 10px 0;
+}
+.container-left {
+  display: flex; /*  Bố trí .div1 và .div2 nằm cạnh nhau trong một hàng ngang bên trong .left.  */
+  gap: 20px;
+  align-items: flex-start; /*  Căn đỉnh trên của .div1 và .div2 thẳng hàng. 
+  Nếu không có dòng này thì chúng có thể bị căn giữa theo chiều dọc.*/
+}
+.dv2 {
+  padding: 20px;
+}
+.div2 {
+  display: flex; /*  Mỗi .item gồm ảnh và chữ, nằm ngang hàng (ảnh bên trái, chữ bên phải). */
+  flex-direction: column; /*   */
+  gap: 10px;
+}
+.item {
+  display: flex; /* Mỗi .item gồm ảnh và chữ, nằm ngang hàng (ảnh bên trái, chữ bên phải).  */
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+}
+.item img {
+  width: 60px;
+  height: auto;
+}
+
+.item p {
+  margin: 0;
+  color: black;
+}
+.div2 img {
+  width: 60px;
+  margin: 5px 5px 0 0;
+  display: inline-block; /*Giúp ảnh giữ dạng “khối” 
+  nhưng vẫn nằm cùng dòng với văn bản, hỗ trợ căn chỉnh đẹp hơn so với block. */
+}
+.div2 p {
+  margin-bottom: 10px;
+}
+.box {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+.box img {
+  width: 80%;
+  max-width: 180px;
+}
+
+.box p {
+  color: black;
+}

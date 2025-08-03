@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p onclick="my_function(Rapper_1)" id="demo">Click me!</p>
+    <script>
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      var Rapper_1 = new Person("Van", "Tugh", 21, "blue");
+      var Rapper_2 = new Person("DRT", "MCK", 31, "white");
+
+      function my_function(person) {
+        document.getElementById("demo").innerHTML =
+          person.firstName +
+          " " +
+          person.lastName +
+          " is " +
+          person.age +
+          " years old";
+      }
+    </script>
+  </body>
+</html>

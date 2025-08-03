@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: #d90000;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            padding-right: 40px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon img {
+            height: 24px;
+            display: block;
+            margin: 0 auto 5px;
+        }
+
+        /* Menu */
+        .menu {
+            background-color: #000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .menu a:hover {
+            background-color: #ff3399;
+            color: #fff;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .menu-item:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            color: black;
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+
+        .submenu a:hover {
+            background-color: #eee;
+        }
+
+        /* Content */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://via.placeholder.com/100x40?text=Logo" alt="Logo">
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
+            <button>🔍</button>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons">
+            <div class="icon">
+                <img src="https://via.placeholder.com/24?text=Info" alt="Info">
+                <span>Thông tin hay</span>
+            </div>
+            <div class="icon">
+                <img src="https://via.placeholder.com/24?text=Payment" alt="Payment">
+                <span>Thu hộ điện, nước</span>
+            </div>
+            <div class="icon">
+                <img src="https://via.placeholder.com/24?text=Cart" alt="Cart">
+                <span>Giỏ hàng</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <nav class="menu">
+        <div class="menu-item">
+            <a href="#">Điện thoại</a>
+        </div>
+        <div class="menu-item">
+            <a href="#">Laptop</a>
+        </div>
+        <div class="menu-item">
+            <a href="#">Phụ kiện</a>
+            <div class="submenu">
+                <a href="#">Tai nghe</a>
+                <a href="#">Cáp sạc</a>
+                <a href="#">Bao da</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="#">Máy tính bảng</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <section class="content">
+        <h1>Chào mừng đến với trang web!</h1>
+        <p>Đây là phần nội dung chính.</p>
+    </section>
+
+</body>
+
+</html>

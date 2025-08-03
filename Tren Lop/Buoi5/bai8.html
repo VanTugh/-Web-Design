@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let km = parseFloat(prompt("Nhập số km đã đi:"));
+      let tien = 0;
+
+      if (km <= 1) {
+        tien = 15000;
+      } else if (km <= 5) {
+        tien = 15000 + (km - 1) * 12000;
+      } else if (km <= 140) {
+        tien = 15000 + 4 * 12000 + (km - 5) * 9000;
+      } else {
+        tien = 15000 + 4 * 12000 + 135 * 9000;
+        tien *= 1.12;
+      }
+
+      document.write(
+        "Số tiền khách phải trả: " + tien.toLocaleString() + " VND<br>"
+      );
+    </script>
+  </body>
+</html>

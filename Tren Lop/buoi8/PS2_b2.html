@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Nhap chuoi :</label>
+    <input type="text" id="chuoi" />
+    <br />
+    <label for="">Kiem tra :</label>
+    <input type="text" id="ketqua" />
+    <button onclick="myf()">KiemTra</button>
+    <script>
+      function myf() {
+        var text = document.getElementById("chuoi").value;
+        text = text.trim();
+        var dem_h = 0;
+        var dem_a = 0;
+        for (var i = 0; i < text.length; i++) {
+          if (text[i] == "a") {
+            dem_a++;
+          } else if (text[i] == "h") {
+            dem_h++;
+          }
+        }
+        if (dem_a == dem_h) {
+          document.getElementById("ketqua").value = " nhu nhau ";
+        } else {
+          document.getElementById("ketqua").value = " khac nhau ";
+        }
+      }
+    </script>
+  </body>
+</html>

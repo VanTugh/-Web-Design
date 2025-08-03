@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng cửu chương</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bảng cửu chương</h2>
+    <table id="bang"></table>
+
+    <script>
+      var table = document.getElementById("bang");
+      for (var i = 1; i <= 10; i++) {
+        var row = "<tr>";
+        for (var j = 1; j <= 9; j++) {
+          row += "<td>" + j + " x" + i + " = " + i * j;
+        }
+        table.innerHTML += row;
+        row = "</tr>";
+      }
+    </script>
+  </body>
+</html>

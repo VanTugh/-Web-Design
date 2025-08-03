@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tinh {
+        background-color: brown;
+        width: 290px;
+        border: 1px solid black;
+        margin: 0 auto;
+        color: aliceblue;
+      }
+      table th,
+      td {
+        border: 1px solid black;
+      }
+      h2 {
+        text-align: center;
+      }
+      .but {
+        text-align: center;
+      }
+      select {
+        width: 95%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tinh">
+      <h2>Thue phong</h2>
+      <table>
+        <tr>
+          <th>Ten nguoi thue</th>
+          <td><input type="text" id="name" /></td>
+        </tr>
+        <tr>
+          <th>Loai Phong</th>
+          <td>
+            <select id="loaiphong" onchange="capnhatgiaphong()">
+              <option value=" ">chon so nguoi</option>
+              <option value="6">6</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="1">1</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Gia</th>
+          <td><input type="number" id="gia" /></td>
+        </tr>
+        <tr>
+          <th>So ngay thue</th>
+          <td><input type="number" id="songay" /></td>
+        </tr>
+        <tr>
+          <th>Thanh tien</th>
+          <td><input type="text" id="kq" /></td>
+        </tr>
+        <tr class="but">
+          <td><button onclick="tinh()">Tinh</button></td>
+          <td><button onclick="xoa()">Xoa</button></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      const bangGia = {
+        6: 10000000,
+        5: 8000000,
+        4: 700000,
+        3: 600000,
+        1: 400000,
+      };
+      function capnhatgiaphong() {
+        const loai = document.getElementById("loaiphong").value;
+        document.getElementById("gia").value = bangGia[loai] || " ";
+        document.getElementById("kq").value = " ";
+      }
+      function tinh() {
+        const loai = document.getElementById("loaiphong").value;
+        const gia = bangGia[loai];
+        const ngay = document.getElementById("songay").value;
+        if (!isNaN(loai) && !isNaN(ngay) && !isNaN(gia)) {
+          const tien = gia * ngay;
+          document.getElementById("kq").value = tien.toLocaleString() + " VND ";
+        } else {
+          alert(" nhap lai de ! ");
+        }
+      }
+      function xoa() {
+        document.getElementById("name").value = " ";
+        document.getElementById("loaiphong").value = " ";
+        document.getElementById("gia").value = " ";
+        document.getElementById("songay").value = " ";
+        document.getElementById("kq").value = " ";
+      }
+    </script>
+  </body>
+</html>

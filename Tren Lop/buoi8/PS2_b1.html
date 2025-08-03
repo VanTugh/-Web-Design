@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      color = [
+        "Blue ",
+        "Green",
+        "Red",
+        "Orange",
+        "Violet",
+        "Indigo",
+        "Yellow ",
+      ];
+      color.sort();
+      var kq = " ";
+      pos = "th";
+      for (var i = 0; i < color.length; i++) {
+        if (i == 0) {
+          pos = "st";
+        } else if (i == 1) {
+          pos = "nd";
+        } else if (i == 2) {
+          pos = "rd";
+        } else {
+          pos = "th";
+        }
+        kq += color[i] + " is the " + (i + 1) + pos + "<br>";
+      }
+      document.write(kq);
+    </script>
+  </body>
+</html>

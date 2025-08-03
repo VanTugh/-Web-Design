@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 1500px;
+}
+.logo {
+  display: flex;
+}
+.cart {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(242, 102, 126);
+  border-radius: 50%;
+  display: flex;
+}
+.cart i {
+  padding-right: 5px;
+}
+.left {
+  padding: 10px;
+  font-size: 24px;
+}
+.left h4 {
+  width: 200px;
+  font-weight: 300;
+}
+.right {
+  padding: 10px;
+  font-size: 24px;
+  padding-left: 1200px;
+}
+.menu {
+  background-color: rgb(242, 102, 126);
+  display: flex;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.menu ul li {
+  list-style: none;
+  padding: 10px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.search {
+  display: flex;
+  justify-content: right;
+}
+.categories,
+span {
+  padding: 10px;
+}
+.main {
+  display: flex;
+}
+.slide_bar {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid black;
+}
+.slide_bar h3 {
+  background-color: yellow;
+}
+.slide_bar h3,
+li {
+  padding: 10px;
+}
+.slide_bar ul li a {
+  text-decoration: none;
+}
+.content {
+  border: 1px solid black;
+}
+.tren {
+  display: flex;
+  margin-bottom: 10px;
+}
+.duoi {
+  display: flex;
+}
+.item {
+  padding: 10px;
+}
+.menu ul li {
+  position: relative;
+}
+.menu ul li .dropdown {
+  position: absolute;
+  display: none;
+}
+.menu ul li:hover .dropdown {
+  display: block;
+  top: 35px;
+  min-width: 120px;
+  background-color: rgb(242, 102, 126);
+}
+.menu ul li :hover {
+  background-color: rgb(227, 25, 59);
+}
+.dropdown li {
+  width: 100px;
+}
+.slide_bar ul li {
+  list-style: none;
+  position: relative;
+}
+.slide_bar ul li .submenu {
+  position: absolute;
+  display: none;
+}
+.slide_bar ul li:hover ul {
+  display: block;
+}
+.slide_bar ul li:hover {
+  background-color: aquamarine;
+}
+.slide_bar ul li .submenu {
+  top: 0;
+  left: 140px;
+  min-width: 120px;
+}

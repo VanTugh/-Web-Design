@@ -1,0 +1,16 @@
+.side {
+    background-color: black;
+    color: white;
+    width: 200px;
+}
+
+.logo img {
+    scale: 0.5;
+    border: 1px solid white;
+}
+
+.navlink {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

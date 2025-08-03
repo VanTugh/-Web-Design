@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table style="align-items: center;">
+            <tr>
+                <td>Nhập chuỗi</td>
+                <td><input type="text" id="inp1"></td>
+            </tr>
+            <tr>
+                <td>Nhập từ</td>
+                <td><input type="text" id="inp2"></td>
+            </tr>
+            <tr>
+                <td>Thông báo</td>
+                <td><input type="text" id="outp"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="solve(event)">Kiểm tra</button></td>
+                <td><button type="submit">Hủy bỏ</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function solve(event) {
+        if (event) event.preventDefault();
+        let inp1 = document.getElementById("inp1").value;
+        let inp2 = document.getElementById("inp2").value;
+        let cnt = 0;
+        for (var i = 0; i < inp1.length; i++) {
+            if (inp1[i] == inp2) cnt++;
+        }
+
+        document.getElementById("outp").value = cnt;
+    }
+</script>
+
+</html>

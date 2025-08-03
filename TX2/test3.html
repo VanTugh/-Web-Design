@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính lương nhân viên</title>
+  </head>
+  <body>
+    <div class="tinh">
+      <h2>Bảng tính lương nhân viên</h2>
+      <table>
+        <tr>
+          <th>Tên</th>
+          <td><input type="text" id="name" /></td>
+        </tr>
+        <tr>
+          <th>Số tháng</th>
+          <td><input type="number" id="thang" /></td>
+        </tr>
+        <tr>
+          <th>Hệ số lương</th>
+          <td><input type="text" id="heso" readonly /></td>
+        </tr>
+        <tr>
+          <th>Lương cơ bản</th>
+          <td><input type="text" id="luongcoban" readonly /></td>
+        </tr>
+        <tr>
+          <th>Lương tháng</th>
+          <td><input type="text" id="luongthang" readonly /></td>
+        </tr>
+        <tr>
+          <th>Thuế thu nhập (10%)</th>
+          <td><input type="text" id="thue" readonly /></td>
+        </tr>
+        <tr>
+          <th>Thực lĩnh</th>
+          <td><input type="text" id="thuclinh" readonly /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button onclick="tinh()">Tính</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      function tinh() {
+        const luongcoban = 6500;
+        const thang = parseInt(document.getElementById("thang").value);
+
+        let heso = 1.2;
+        if (thang < 12) {
+          heso = 1.2;
+        } else if (thang <= 36) {
+          heso = 2.8;
+        } else {
+          heso = 3;
+        }
+
+        const luongthang = luongcoban * heso;
+        const thue = luongthang * 0.1;
+        const thuclinh = luongthang - thue;
+
+        // Gán kết quả vào các ô
+        document.getElementById("luongcoban").value = luongcoban;
+        document.getElementById("heso").value = heso;
+        document.getElementById("luongthang").value = luongthang.toFixed(2);
+        document.getElementById("thue").value = thue.toFixed(2);
+        document.getElementById("thuclinh").value = thuclinh.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

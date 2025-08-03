@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+}
+
+.header .header-left {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 10px 5px;
+    align-items: center;
+    height: 150px;
+    background-color: black;
+}
+
+.header .header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+}
+
+.header .header-right .header-child {
+    width: 100px;
+    align-content: center;
+    margin: 10px;
+    height: 100%;
+}
+
+.header .header-right .header-child img {
+    width: 100px;
+}
+
+.header .header-right .header-child p {
+    text-align: center;
+    color: black;
+}
+
+.header .header-left input {
+    height: 50px;
+    width: 200px;
+}
+
+.header .header-right .header-child:hover {
+    background-color: white;
+    color: red;
+}
+
+.container {
+    display: flex;
+}
+
+.container .menu {
+    padding-left: 10px;
+}
+
+.container .menu ul li {
+    padding: 10px 20px 10px 60px;
+    border: 1px dotted;
+}
+
+.container .menu .menu-header {
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 10px;
+    background-color: #336699;
+    height: 40px;
+    color: white;
+}
+
+.container .menu .cap1:hover p {
+    color: yellow;
+}
+
+.container .menu .cap2 ul li {
+    list-style: none;
+}
+
+.container .menu .cap2 {
+    position: relative;
+}
+
+.container .menu .cap2 .submenu {
+    position: absolute;
+    display: none;
+    width: 200px;
+}
+
+.menu .cap2:hover .submenu {
+    display: block;
+    left: 100%;
+    top: 0%;
+}
+
+.content {
+    margin-left: 10px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.content1 {
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.content1 .description {
+    font-size: 20px;
+}
+
+.content1 .price {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content1 img {
+    height: 220px;
+    width: 200px;
+}

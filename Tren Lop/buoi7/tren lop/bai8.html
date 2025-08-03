@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 800px;
+      }
+      h2 {
+        background-color: rgb(224, 185, 149);
+        color: rgb(160, 89, 42);
+        text-align: center;
+      }
+      .tinh {
+        background-color: rgb(240, 217, 195);
+      }
+      .but {
+        text-align: center;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tinh">
+      <table>
+        <h2>Giai phuong trinh bac 2</h2>
+        <tr>
+          <th>Phuong trinh :</th>
+          <td>
+            <input type="number" id="num" />x +
+            <input type="number" id="last" />
+            =0
+          </td>
+        </tr>
+        <tr>
+          <th>Nghiem :</th>
+          <td><input type="text" id="result" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="but">
+            <button onclick="myF()">Giai phuong trinh</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function myF() {
+        var a = parseFloat(document.getElementById("num").value);
+        var b = parseFloat(document.getElementById("last").value);
+        if (!isNaN(a) && !isNaN(b)) {
+          var kq = -b / a;
+          document.getElementById("result").value = kq;
+        } else {
+          alert("nhap lai ");
+        }
+      }
+    </script>
+  </body>
+</html>

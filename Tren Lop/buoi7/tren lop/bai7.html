@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            width: 400px;
+        }
+        h2
+        {
+            background-color: rgb(224, 185, 149);
+            color: rgb(160, 89, 42);
+            text-align: center;
+        }
+        .tinh
+        {
+            background-color: rgb(240, 217, 195);
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+        <h2>TIM SO LON HON</h2>
+        <table> 
+            <tr>
+                <td> <label for="width">Nhap so a : </label></td>
+                <td> <input type="number"  id="canhA"></td>
+            </tr>
+            <tr>
+                <td> <label for="width">Nhap so b : </label> </td>
+                <td><input type="number" id="canhB"  ></td>
+            </tr>
+            <tr>
+                <td><label for="width">So  lon hon la : </label></td>
+                <td><input type="text"  id="result"> </td>
+            </tr>
+            <tr>
+                <td> <button onclick="Caculate() ">Tinh</button>
+                </td>
+            </tr>
+        </table>
+            
+        <script>
+            function Caculate()
+            {
+                var a= parseFloat(document.getElementById("canhA").value);
+                var b= parseFloat(document.getElementById("canhB").value);
+                if(!isNaN(a)&& !isNaN(b))
+                {
+                    if(a<b)
+                    {
+                        document.getElementById("result").value = b;
+                    }
+                    else
+                    {
+                        document.getElementById("result").value = a;
+                    }
+                    
+                }
+                else
+                {
+                    alert(" nhap lai !");
+                }
+            }
+        </script>
+           
+            
+            
+            
+           
+    </div>
+</body>
+</html>
+</body>
+</html>

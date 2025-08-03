@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+      var mang = {};
+      var dem = 0;
+      var maxdem = 0;
+      for (var i = 0; i < arr1.length; i++) {
+        value = arr1[i];
+        if (mang[value]) {
+          mang[value]++;
+        } else {
+          mang[value] = 1;
+        }
+        if (mang[value] > dem) {
+          dem = mang[value];
+          maxdem = value;
+        }
+      }
+      document.write("Giá trị xuất hiện nhiều nhất: " + maxdem + "<br>");
+      document.write("Số lần xuất hiện: " + dem);
+    </script>
+  </body>
+</html>

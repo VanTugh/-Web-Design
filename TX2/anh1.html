@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="anh1.js"></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      h2 {
+        text-align: center;
+        padding-right: 40px;
+      }
+      table {
+        background-color: brown;
+      }
+      body {
+        width: 400px;
+        margin: 0 auto;
+        height: 400px;
+      }
+      .but {
+        text-align: center;
+      }
+      select {
+        width: 95%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Thue phong</h2>
+    <table>
+      <tr>
+        <th>Ten nguoi thue</th>
+        <td><input type="text" id="name" /></td>
+      </tr>
+      <tr>
+        <th>Loai phong</th>
+        <td>
+          <select id="loaiphong" onchange="capnhatphong()">
+            <option value="">chon loai phong</option>
+            <option value="6">6 nguoi</option>
+            <option value="5">5 nguoi</option>
+            <option value="4">4 nguoi</option>
+            <option value="3">3 nguoi</option>
+            <option value="1">1 nguoi</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Gia</th>
+        <td><input type="number" id="price" /></td>
+      </tr>
+      <tr>
+        <th>So ngay thue</th>
+        <td><input type="number" id="songaythue" /></td>
+      </tr>
+      <tr>
+        <th>Thanh tien</th>
+        <td><input type="text" id="result" /></td>
+      </tr>
+      <tr class="but">
+        <td><button onclick="tinh()">tinh</button></td>
+        <td><button onclick="xoa()">xoa</button></td>
+      </tr>
+    </table>
+  </body>
+</html>

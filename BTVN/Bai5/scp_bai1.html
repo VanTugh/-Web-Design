@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Day la</h2>
+    <p id="demo"></p>
+    <!-- hiển thị một dòng văn bản bằng document.write   -->
+    <!-- ghi ra nội dung thẻ dùng innerHTML-->
+    <!-- viết ra cảnh báo bằng window.alert()-->
+    <script>
+      document.write(3 + 8);
+      document.getElementById("demo").innerHTML = "toi iu em";
+      window.alert("bình tĩnh");
+    </script>
+    <!--hàm trong js-->
+    <p class="pt1"></p>
+    <script>
+      var x = function (a, b) {
+        return a + b;
+      };
+      document.getElementsByClassName("pt1")[0].innerHTML = x(5, 1);
+    </script>
+    <p id="test"></p>
+
+    <script>
+      var person = {
+        fullNAME: function (city, address) {
+          return (
+            this.firstNAME +
+            " " +
+            this.lastNAME +
+            " : " +
+            city +
+            " , " +
+            address
+          );
+        },
+      };
+      var pt1 = {
+        firstNAME: "Tung",
+        lastNAME: "Nguyen",
+      };
+      var x = person.fullNAME.call(pt1, "Vinh Loc", "Thanh Hoa");
+      document.getElementById("test").innerHTML = x;
+    </script>
+    <h1 id="change">Nội dung nè</h1>
+    <button type="button" onclick="chuyenchu()">Bấm vào đây</button>
+    <h2 id="text">Xem Gio</h2>
+    <button type="button" onclick="xemgio()">Bấm vào đây</button>
+    <script>
+      function chuyenchu() {
+        document.getElementById("change").innerHTML = " Tớ thích cậu";
+      }
+      function xemgio() {
+        var chao;
+        var time = new Date().getHours();
+        if (time < 10) {
+          chao = "chào buổi sáng";
+        } else if (time < 20) {
+          chao = "Chào buổi chiều";
+        } else {
+          chao = "ngu ngon";
+        }
+        document.getElementById("text").innerHTML = chao;
+      }
+    </script>
+    <p id="switch"></p>
+    <script>
+      var text;
+      switch (new Date().getDay()) {
+        case 6:
+          text = "hom nay la thu 7";
+          break;
+        case 0:
+          text = "hom nay la chu nhat";
+          break;
+        default:
+          text = "cho den ngay cuoi tuan";
+      }
+
+      document.getElementById("switch").innerHTML = text;
+    </script>
+    <p id="vong_lap"></p>
+    <script>
+      var text = "";
+      var i;
+      for (i = 0; i < 9; i++) {
+        text += " yeu " + i + " em " + "<br>";
+      }
+      document.getElementById("vong_lap").innerHTML = text;
+    </script>
+
+    <p id="for_in"></p>
+    <button type="button" onclick="myFun()">click de</button>
+    <script>
+      function myFun() {
+        var person = { fname: " Van Tung", age: 25, address: " Vinh Loc " };
+        var text = "";
+        for (var i in person) {
+          text += person[i] + " ";
+        }
+        document.getElementById("for_in").innerHTML = text;
+      }
+    </script>
+    <button type="button" onclick="myMang()">click</button>
+    <p id="mang"></p>
+    <script>
+      function myMang() {
+        var people = [
+          { firstName: "Tung", lastName: "Nguyen", age: 25 },
+          { firstName: "Linh", lastName: "Tran", age: 22 },
+          { firstName: "Nam", lastName: "Le", age: 30 },
+        ];
+        var text = " ";
+        for (const person of people) {
+          text +=
+            person.firstName +
+            " " +
+            person.lastName +
+            " - Tuổi: " +
+            person.age +
+            "<br>";
+        }
+        document.getElementById("mang").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

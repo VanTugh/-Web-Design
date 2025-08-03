@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu Ngang Đa Cấp</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Menu cha */
+      .menu {
+        background-color: #333;
+        display: flex;
+      }
+      .menu ul {
+        text-decoration: none;
+        list-style: none;
+      }
+      .menu > li {
+        position: relative;
+      }
+
+      .menu > li > a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu > li:hover {
+        background-color: #444;
+      }
+
+      /* Menu con cấp 2 */
+      .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        min-width: 160px;
+      }
+
+      .menu li:hover > ul {
+        display: block;
+      }
+
+      .menu li ul li {
+        position: relative;
+      }
+
+      .menu li ul li a {
+        padding: 10px 15px;
+        color: white;
+        display: block;
+        text-decoration: none;
+      }
+
+      .menu li ul li:hover {
+        background-color: #555;
+      }
+
+      /* Menu con cấp 3 */
+      .menu li ul li ul {
+        left: 100%;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">Trang chủ</a></li>
+      <li>
+        <a href="#">Sản phẩm</a>
+        <ul>
+          <li>
+            <a href="#">Áo</a>
+            <ul>
+              <li><a href="#">Áo sơ mi</a></li>
+              <li><a href="#">Áo thun</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Quần</a>
+            <ul>
+              <li><a href="#">Quần jean</a></li>
+              <li><a href="#">Quần short</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </body>
+</html>

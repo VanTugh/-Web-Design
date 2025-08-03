@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-top .cart {
+    display: flex;
+    width: 150px;
+}
+
+.header-top .cart img {
+    margin-right: 10px;
+}
+
+.header-top .cart-info {
+    color: black;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #FF3399;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.header-bottom-left {
+    display: flex;
+    color: white;
+}
+
+.header-bottom-left p {
+    margin-right: 10px;
+}
+
+.header-bottom-left:hover p {
+    color: #FFCCFF;
+}
+
+.header-bottom-right {
+    align-items: center;
+}
+
+.header-bottom-right input {
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.header-bottom-right img {
+    height: 30px;
+}
+
+.container {
+    padding-top: 10px;
+    display: flex;
+}
+
+.menu {
+    width: 250px;
+    border: 1px solid #999999;
+}
+
+.menu-header {
+    background-color: #FFCC33;
+    height: 40px;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.menu ul li {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.menu .cap2 {
+    position: relative;
+}
+
+.menu .cap2 .submenu {
+    position: absolute;
+    list-style: none;
+    display: none;
+    width: 200px;
+    left: 100%;
+    top: 0%;
+    background-color: white;
+}
+
+.content {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.menu .cap2:hover .submenu {
+    display: block;
+}
+
+.content {
+    margin-left: 50px;
+}
+
+.content1 {
+    display: flex;
+    border: 1px solid #999999;
+    width: 600px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.content1 .content-img {
+    border: 1px solid #999999;
+}
+
+.content1 .content-img img {
+    padding: 20px;
+}
+
+.content1 .content-info {
+    padding-left: 10px;
+}
+
+.content1 .content-info .name {
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.content1 .content-info .price {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.content1 .content-info .price .new-price {
+    color: #FF3399;
+    margin-right: 20px;
+}
+
+.content1 .content-info .price .old-price {
+    color: #999999;
+    text-decoration: line-through;
+}
+
+
+.content1 .content-info .add {
+    background-color: #999999;
+    color: black;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.content1 .content-info .add:hover {
+    background-color: #FF3399;
+    color: #999999;
+}

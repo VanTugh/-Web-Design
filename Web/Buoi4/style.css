@@ -1,0 +1,155 @@
+/* header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    /* debug */
+    background-color: yellow;
+}
+
+.header_logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header_search_box {
+    padding-top: 30px;
+}
+
+.header_search_box .search {
+    width: 250px;
+}
+
+.button_items {
+    padding-top: 30px;
+}
+
+.button_items .button {
+    border: white 0px solid;
+    background-color: #FF3399;
+    color: white;
+}
+
+.button_items .button:hover {
+    background-color: yellow;
+    color: red;
+}
+
+/* nav */
+.menu {
+    background-color: black;
+    color: white;
+    padding-right: 20px;
+    height: 47px;
+}
+
+.menu_list {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu_list li {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.menu_level_1:hover {
+    background-color: #FF3399;
+}
+
+.menu_level_2:hover {
+    background-color: white;
+    color: black;
+}
+
+/* submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    z-index: 1;
+}
+
+.menu_level_2_done {
+    position: relative;
+}
+
+.menu_level_2_done:hover {
+    background-color: white;
+    color: black;
+}
+
+.submenu li {
+    width: 60px;
+    text-align: center;
+    padding-right: 60px;
+}
+
+.menu_list li:hover .submenu {
+    display: block;
+}
+
+/* content */
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.new_sale {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.new_sale .new {
+    background-color: #FF3399;
+    padding: 5px;
+}
+
+.new_sale .sale {
+    background-color: yellow;
+    padding: 5px;
+}
+
+.contetn_img {
+    width: 200px;
+    height: 400px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content_info {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+}
+
+.content_info_name:hover {
+    color: #FFFF66;
+}
+
+.content_info .price .new {
+    padding-right: 20px;
+}
+
+.content_info .price .old {
+    color: red;
+}

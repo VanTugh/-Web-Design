@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" style="align-items: center;">
+        <table>
+            <tr>
+                <td>Họ và Tên</td>
+                <td><input type="text" id="inp"></td>
+            </tr>
+            <tr>
+                <td>Tên</td>
+                <td><input type="text" id="outp"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="solve(event)">Hiện thị</button></td>
+                <td><button type="submit">Huy bo</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function solve(event) {
+        if (event) event.preventDefault();
+        const fullname = document.getElementById("inp").value;
+        const name = fullname.trim().split(" ");
+        const ans = name[name.length - 1];
+
+        document.getElementById("outp").value = ans;
+    }
+</script>
+
+</html>

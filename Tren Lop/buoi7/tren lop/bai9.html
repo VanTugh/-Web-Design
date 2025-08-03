@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body
+        {
+            width: 400px;
+            
+        }
+        h2
+        {
+            background-color: rgb(19, 94, 86);
+            color: rgb(243, 235, 230);
+            text-align: center;
+        }
+        .tinh
+        {
+            background-color: rgb(48, 155, 173);
+        }
+        .but
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+
+        <table>
+            <h2>TINH TIEN KARAOKE</h2>
+            <tr>
+                <th>Gio bat dau :</th>
+                <td><input type="number" id="start"> (h)</td>
+            </tr>
+            <tr>
+                <th>Gio ket thuc :</th>
+                <td><input type="number" id="end"> (h)</td>
+            </tr>
+            <tr>
+                <th>Tien thanh toan : </th>
+                <td><input type="text" id="thanhtoan"> (VND)</td>
+            </tr>
+            <tr class="but"><td colspan="2"><button onclick="Caculate()">Tinh</button></td></tr>
+        </table>
+
+    </div>
+   
+    <script>
+        function Caculate()
+        {
+            var start= parseFloat(document.getElementById("start").value);
+            var end= parseFloat(document.getElementById("end").value);
+            var tien=0;
+            if(!isNaN(start) && !isNaN(end) 
+            && start>=10 
+            && start<end && end<=24
+        ){
+            var h20k=0;
+            if(start<17)
+        {
+            h20k= Math.min(end,17)-start;
+            tien=h20k*20000;
+        }
+        var h45k=0;
+        if(end>=17)
+        {
+            h45k=end-Math.max(start,17);
+            tien+=h45k*45000;
+        }
+        document.getElementById("thanhtoan").value=tien;
+        }
+            else
+                {
+                    document.write(" nhap lai !");
+                }
+        }
+    </script>
+    </script>
+</body>
+</html>

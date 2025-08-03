@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Định dạng văn bản</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      h2 {
+        color: green;
+        text-align: center;
+      }
+
+      .mon {
+        font-weight: bold;
+      }
+
+      .hoa-hoc span,
+      .toan-hoc span {
+        color: #ff0000; /* màu đỏ */
+      }
+
+      .fromm {
+        width: 500px;
+        text-align: left;
+      }
+
+      .code {
+        background-color: #cccccc; /* nền xám */
+        padding: 10px;
+        font-family: monospace;
+        width: 500px;
+        text-align: center;
+      }
+
+      .code span {
+        color: #0000cc; /* chữ màu xanh dương đậm */
+      }
+
+      a {
+        color: blue;
+      }
+      span.nghieng {
+        color: black;
+        font-style: italic;
+      }
+      #line2 {
+        display: inline-block;
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fromm">
+      <h2>Định dạng văn bản</h2>
+      <p class="hoa-hoc">
+        <span class="mon">Hóa học:</span> <span class="nghieng">Nước:</span>
+        <span>H<sub>2</sub>O</span> ;
+        <span class="nghieng">Axit Sunfuric:</span>
+        <span>H<sub>2</sub>SO<sub>4</sub></span>
+      </p>
+      <p class="toan-hoc">
+        <span class="mon">Toán học:</span>
+        <span class="nghieng">Phương trình bậc 2:</span>
+        <span>ax<sup>2</sup> + bx + c = 0</span>
+      </p>
+      <p class="tin-hoc">
+        <span class="mon">Tin học:</span>
+        <span class="nghieng"> Vòng lặp For:</span>
+      </p>
+    </div>
+
+    <div class="code">
+      <span>For i = 0 To 10</span><br /><br />
+      <span id="line2">Tong = Tong + 1</span><br /><br />
+      <span>Next</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table , tr,th,td
+        {
+            border-collapse:co ;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+        <table>
+            <h2>
+                THANH TOAN TIEN NUOC 2023
+            </h2>
+            <tr>
+                <th>Ten khach hang :</th>
+                <td>Pham Van Ha</td>
+            </tr>
+            <tr>
+                <th>Chi so cu : </th>
+                <td><input type="number" id="old"></td>
+            </tr>
+            <tr>
+                <th> Chi so moi :</th>
+                <td><input type="number" id="new"></td>
+            </tr>
+            <tr>
+                <th>Gia tien :</th>
+                <td><input type="number" id="price"></td>
+            </tr>
+            <tr>
+                <th>Tong tien : </th>
+                <td><input type="text" id="result"></td>
+            </tr>
+            <tr>
+                <td><button onclick="myF()">Tinh</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function myF()
+        {
+            var old_num=parseFloat(document.getElementById("old").value);
+            var new_num= parseFloat(document.getElementById("new").value);
+            var price =parseFloat(document.getElementById("price").value);
+            if(!isNaN(old_num) && !isNaN(new_num) && !isNaN(price) )
+            {
+                var kq = (new_num-old_num)*price;
+                document.getElementById("result").value = kq;
+            }
+            else
+            {
+                alert(" nhap lai !");
+            }
+        }
+    </script>
+</body>
+</html>

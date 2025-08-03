@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>kiem tra xem</p>
+    <script>
+      var patt = /Tung/;
+      if (patt.test(" Anh la Nguyen Tung")) {
+        document.write(" co nha");
+      } else {
+        document.write(" khong co nha");
+      }
+    </script>
+    <br />
+    25
+    <p>2.Kiểm tra chuỗi có ít nhất một chữ n</p>
+    <script>
+      if (/n+/.test("thu hoach ve chia chac cung my fiend")) {
+        document.write(" co nha");
+      } else {
+        document.write(" khong co nha");
+      }
+    </script>
+    <p>3.Kiểm tra trong chuỗi có xuất hiện ký tự số hay không</p>
+    <script>
+      if (/[0-9]/.test(" trap trap trong thu do phi trong man dem00")) {
+        document.write(" co nha");
+      } else {
+        document.write(" khong co nha");
+      }
+    </script>
+    <br />
+    <p>4.Kiểm tra trong chuỗi không hoặc có xuất hiện số</p>
+    <script>
+      if (/[0-9]*/.test("freetuts")) {
+        document.write("Luôn luôn chạy");
+      } else {
+        document.write("Không bao giờ chạy");
+      }
+    </script>
+    <br />
+    <p>5.Kiểm tra trong chuỗi có chữ H hay không</p>
+    <script>
+      if (/H/i.test("tunh")) {
+        document.write("Luôn luôn chạy");
+      } else {
+        document.write("Không bao giờ chạy");
+      }
+    </script>
+    <p>
+      7.Kiểm tra chuỗi xuất hiện ít nhất 10 chữ N liên tiếp và không phân biệt
+      chữ hoa chữ thường
+    </p>
+    <script>
+      var patt = /n{10,}/i;
+      if (patt.test("tuNNNNNNNnNN")) {
+        document.write("Luôn luôn chạy");
+      } else {
+        document.write("Không bao giờ chạy");
+      }
+    </script>
+    <br />
+    <p>8.Kiểm tra chuỗi có phải là 'freetuts.net' hay không</p>
+    <script>
+      var text = /^features\.com$/i;
+      // ^	Khớp đầu chuỗi (nghĩa là bắt đầu phải là features.com)
+      // features	Tìm chính xác chữ "features"
+      // \.	Dấu chấm . — vì . là ký tự đặc biệt nên phải escape bằng \
+      // com	Khớp phần "com"
+      // $	Khớp cuối chuỗi (nghĩa là chuỗi phải kết thúc bằng com)
+      // /i	Không phân biệt chữ hoa thường (case-insensitive)
+      if (text.test("features.com")) {
+        document.write("Luôn luôn chạy");
+      } else {
+        document.write("Không bao giờ chạy");
+      }
+    </script>
+    <br />
+    <p>9.Kiểm tra chuỗi là các chữ số và dài 8 ký tự</p>
+    <script>
+      var pass = /^[0-9]{8}[a-z]{2}$/;
+      if (pass.test("12345679ez")) {
+        document.write("Luôn luôn chạy");
+      } else {
+        document.write("Không bao giờ chạy");
+      }
+    </script>
+    <br />
+    <p>
+      10.Kiểm tra chuỗi định dạng mã thẻ cào xxxx-xxxx-xxxx-xxxx và x chính là
+      các chữ số
+    </p>
+    <script>
+      var the = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+      if (the.test("1123-1111-1111-1111")) {
+        document.write("Luôn luôn chạy");
+      } else {
+        document.write("Không bao giờ chạy");
+      }
+    </script>
+    <br />
+    <p>11.Lấy tất cả các chữ số trong chuỗi "số điện thoại 0979306603".</p>
+    <script>
+      let string = "số điện thoại 0979306603";
+      var kq = string.match(/[0-9]+/gim);
+      //       | Cờ  | Tên đầy đủ    | Tác dụng                                                                                                                      |
+      // | --- | ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+      // | `g` | `global`      | Tìm **tất cả** các kết quả phù hợp trong chuỗi, **không dừng lại sau kết quả đầu tiên**.                                      |
+      // | `i` | `ignore case` | Bỏ qua **phân biệt chữ hoa và chữ thường**. Ví dụ: `a` sẽ khớp với cả `A` và `a`.                                             |
+      // | `m` | `multiline`   | Dùng khi chuỗi có nhiều dòng. Cho phép `^` và `$` khớp với **đầu và cuối của từng dòng**, thay vì chỉ đầu/cuối toàn bộ chuỗi. |
+
+      console.log(kq);
+      document.write(kq + "</br>");
+
+      let mang = " 24k.Right 2k3 gia roi h tao chi ki nguc 2k5";
+      var kq1 = mang.match(/[0-9]+/gim);
+      console.log(kq1);
+      document.write(kq1);
+    </script>
+  </body>
+</html>

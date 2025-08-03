@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table , tr,th,td
+        {
+            border-collapse:co ;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+        <table>
+            <h2>
+               DANH GIA NANG LUC HAUI 2025
+            </h2>
+            <tr>
+                <th>Tu duy dinh luong : </th>
+                <td><input type="number" id="dluong"></td>
+            </tr>
+            <tr>
+                <th> Tu duy dinh tinh :</th>
+                <td><input type="number" id="dtinh"></td>
+            </tr>
+            <tr>
+                <th> Diem khoa hoc :</th>
+                <td><input type="number" id="khoahoc"></td>
+            </tr>
+            <tr>
+                <th>Tong diem : </th>
+                <td><input type="text" id="tong"></td>
+            </tr>
+            <tr>
+                <th>Diem dat :</th>
+                <td><input type="number" id="diemdat"></td>
+            </tr>
+            <tr>
+                <th>Ket qua :</th>
+                <td><input type="text" id="rank"></td>
+            </tr>
+            <tr>
+                <td><button onclick="myF()">Ket qua</button></td>
+                <td><button onclick="del()">Xoa</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function myF()
+        {
+            var dluong=parseFloat(document.getElementById("dluong").value);
+            var dtinh= parseFloat(document.getElementById("dtinh").value);
+            var khoahoc =parseFloat(document.getElementById("khoahoc").value);
+            var diemdat= 120;
+            document.getElementById("diemdat").value = 120;
+            if( !isNaN(dluong) && !isNaN(dtinh) && !isNaN(khoahoc) && !isNaN(diemdat)           
+                )
+            {
+                var kq = (dtinh+dluong+khoahoc);
+                if(kq<diemdat)
+                {
+                     document.getElementById("tong").value = kq;
+                     document.getElementById("rank").value = "Ban da truot";
+                }
+                else
+                {
+                    document.getElementById("tong").value = kq;
+                    document.getElementById("rank").value = "Ban da do";
+                }
+                
+            }
+            else
+            {
+                alert(" nhap lai !");
+            }
+        }
+        function del()
+        {
+            document.getElementById("dluong").value = "";
+            document.getElementById("dtinh").value = "";
+            document.getElementById("khoahoc").value = "";
+            document.getElementById("tong").value = "";
+            document.getElementById("diemdat").value = "";
+            document.getElementById("rank").value = "";
+        }
+    </script>
+</body>
+</html>

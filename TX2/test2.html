@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 1200px;
+      }
+      .one {
+        display: flex;
+        background-color: beige;
+        justify-content: space-between;
+      }
+      .logo img {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+      }
+      .logo h3 {
+        padding: 0 10px 10px 10px;
+      }
+      .search {
+        width: 600px;
+        margin-top: 50px;
+      }
+      .search input {
+        width: 70%;
+      }
+      .search i {
+        background-color: black;
+        color: aliceblue;
+      }
+      .mini {
+        margin-top: 50px;
+        margin-right: 20px;
+        display: flex;
+      }
+      .mini p {
+        margin-left: 10px;
+      }
+      .mini i {
+        background-color: black;
+        color: aliceblue;
+        height: 15px;
+        width: 20px;
+        padding: 5px;
+      }
+      .menu {
+        background-color: black;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+        padding: 10px;
+        position: relative;
+      }
+      .menu ul li a {
+        color: aliceblue;
+        text-decoration: none;
+      }
+      .menu ul li .dropdown {
+        position: absolute;
+        display: none;
+        min-width: 120px;
+        background-color: brown;
+        left: 0;
+        top: 30px;
+      }
+      .menu ul li:hover .dropdown {
+        display: block;
+      }
+      .menu ul li:hover {
+        background-color: rgb(172, 172, 7);
+      }
+      .search input::placeholder {
+        color: rgb(58, 65, 72);
+      }
+      .main {
+        display: flex;
+      }
+      .slide_bar {
+        width: 400px;
+        padding-bottom: 10px;
+      }
+      .slide_bar h2 {
+        text-align: center;
+      }
+      .slide_bar li {
+        list-style: none;
+        padding: 10px;
+      }
+      .slide_bar ul li a {
+        text-decoration: none;
+      }
+      .big img {
+        width: 880px;
+        height: 500px;
+        padding-right: 20px;
+      }
+      .item img {
+        height: 155px;
+        padding-top: 10px;
+        margin-left: 40px;
+      }
+      .fot img {
+        width: 30%;
+        height: 200px;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .fot :last-child {
+        padding-left: 42px;
+      }
+      .fot img:nth-child(2) {
+        padding-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="logo">
+        <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+        <h3>Pernancy for you babby</h3>
+      </div>
+      <div class="search">
+        <input type="text" id="txet" placeholder=" Tim kiem..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="mini">
+        <i class="fa-solid fa-cart-plus"></i>
+        <p>Mua sam thong minh</p>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">Trang chu</a></li>
+        <li>
+          <a href="">Quan ao</a>
+          <ul class="dropdown">
+            <li><a href="">Quan the thao</a></li>
+            <li><a href="">Ao the thao</a></li>
+            <li><a href="">Ao thun coc</a></li>
+          </ul>
+        </li>
+        <li><a href="">Lien he</a></li>
+        <li><a href="">Tin tuc</a></li>
+        <li><a href="">San pham</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="slide_bar">
+        <h2>San pham</h2>
+        <ul>
+          <li><a href="">Quan ao cho nu</a></li>
+          <li><a href="">Quan ao cho nam</a></li>
+          <li><a href="">Quan ao da bong</a></li>
+        </ul>
+      </div>
+      <div class="big">
+        <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+      </div>
+    </div>
+    <div class="fot">
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+    </div>
+  </body>
+</html>

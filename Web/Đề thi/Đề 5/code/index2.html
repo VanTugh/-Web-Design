@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table style="align-items: center;">
+            <tr>
+                <td>Nhập chuỗi</td>
+                <td><input type="text" id="inp"></td>
+            </tr>
+            <tr>
+                <td>Số từ có 4 kí tự</td>
+                <td><input type="text" id="outp"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="solve(event)">Tim</button></td>
+                <td><button type="submit">Huy bo</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function solve(event) {
+        if (event) event.preventDefault();
+        const inp = document.getElementById("inp").value;
+        const arr = inp.split(" ");
+        let cnt = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length >= 4) cnt++;
+        }
+
+        document.getElementById("outp").value = cnt;
+    }
+</script>
+
+</html>

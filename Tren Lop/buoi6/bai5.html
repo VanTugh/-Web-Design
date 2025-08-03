@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="myFUN()">OPEN</button>
+    <button onclick="close()">CLOSE</button>
+    <button onclick="move()">MOVE TO</button>
+    <script>
+      var my_window;
+      function myFUN() {
+        my_window = window.open("", "my win", "height=200 ,width= 200");
+        my_window.document.write(" <p> day la web cua toi </p>");
+      }
+      function close() {
+        my_window = window.close();
+      }
+      function move() {
+        my_window.moveTo(500, 300);
+        my_window.focus();
+      }
+    </script>
+  </body>
+</html>

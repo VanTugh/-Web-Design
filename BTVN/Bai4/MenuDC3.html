@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      .menu {
+        background-color: rgb(32, 94, 149);
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+      }
+      .menu a {
+        text-decoration: none;
+      }
+      .menu li {
+        position: relative;
+      }
+      .menu li ul {
+        position: absolute;
+        display: none;
+        background-color: aqua;
+      }
+      .menu li:hover {
+        background-color: aliceblue;
+      }
+      .menu li:hover ul {
+        display: block;
+      }
+      .menu li a {
+        display: block;
+      }
+      .menu li ul li {
+        text-align: left;
+        padding: 5px 10px;
+        min-width: 100px; /* Giúp có không gian hiển thị rõ ràng */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="/BTVN/Bai2/parkchaeyoung.jpg" alt="" />
+    </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">W1</a></li>
+        <li>
+          <a href="#">W2</a>
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">W3</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

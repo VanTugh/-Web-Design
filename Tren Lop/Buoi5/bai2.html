@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var text = " ";
+      for (i = 1; i < 51; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+          text +=
+            "<span style = 'color :red'> Chao ban " + i + "</span>" + " <br>";
+        } else if (i % 3 != 0 && i % 5 == 0) {
+          text += "Chao ong " + i + "</span>" + " <br>";
+        } else if (i % 3 == 0 && i % 5 != 0) {
+          text += "<u> Chao ba " + i + "</u>" + "<br>";
+        } else {
+          text += i + " <br>";
+        }
+      }
+      document.write(text);
+    </script>
+  </body>
+</html>

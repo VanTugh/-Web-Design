@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body {
+        width: 400px;
+      }
+      h2 {
+        background-color: rgb(224, 185, 149);
+        color: rgb(160, 89, 42);
+        text-align: center;
+      }
+      .tinh {
+        background-color: rgb(240, 217, 195);
+      }
+      .but {
+        text-align: center;
+        padding-top: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="tinh">
+
+        <table>
+            <h2>NHAN DIEN TAM GIAC</h2>
+            <tr>
+                <th>Canh 1 :</th>
+                <td><input type="number" id="canh1"> (cm)</td>
+            </tr>
+            <tr>
+                <th>Canh 2 :</th>
+                <td><input type="number" id="canh2"> (cm)</td>
+            </tr>
+            <tr>
+                <th>Canh 3 :</th>
+                <td><input type="number" id="canh3"> (cm)</td>
+            </tr>
+            <tr>
+                <th>Loai tam giac : </th>
+                <td><input type="text" id="result"></td>
+            </tr>
+            <tr class="but"><td>
+                <button onclick="Caculate()">Nhan Dang</button>
+            </td>
+            <td><button onclick="resert()">Xoa</button></td>
+        </tr>
+        </table>
+
+    </div>
+   
+    <script>
+        function Caculate()
+        {
+            var c1= parseFloat(document.getElementById("canh1").value);
+            var c2= parseFloat(document.getElementById("canh2").value);
+            var c3= parseFloat(document.getElementById("canh3").value);
+            var kq="";
+            if(!isNaN(c1) && !isNaN(c2) && !isNaN(c3))
+            {
+                if(c1==c2 && c2==c3 && c3==c1)
+            {
+                kq="tam giac deu";
+            }
+            else if(c3 == Math.sqrt(c1*c1+c2*c2) || 
+        c1 == Math.sqrt(c3*c3+c2*c2) || 
+        c2 == Math.sqrt(c1*c1+c3*c3) 
+        )
+        {
+            kq="tam giac vuong";
+        }
+        else
+        {
+            kq="tam giac thuong";
+        }
+        document.getElementById("result").value=kq;
+        }
+        else
+                {
+                    document.write(" nhap lai !");
+                }
+        }
+        function resert()
+        {
+            const ids=["canh1","canh2","canh3","result"];
+            ids.forEach(i => {document.getElementById(i).value=""
+            });
+        }
+    </script>
+    </script>
+</body>
+</html>

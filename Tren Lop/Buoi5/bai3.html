@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="bang">
+      <tr>
+        <th>STT</th>
+        <th>Ten sach</th>
+        <th>Tac gia</th>
+      </tr>
+    </table>
+    <script>
+      var table = document.getElementById("bang");
+      for (i = 1; i <= 10; i++) {
+        var row = "<tr>";
+        row += "<td>" + i + "</td>";
+        row += "<td> Ten sach " + i + "</td>";
+        row += "<td> Ten tac gia  " + i + "</td>";
+        row += "</tr>";
+        table.innerHTML += row;
+      }
+    </script>
+  </body>
+</html>

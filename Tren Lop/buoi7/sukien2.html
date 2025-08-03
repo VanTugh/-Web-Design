@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Event Example</title>
+    <style>
+      input {
+        padding: 10px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: blue;
+        background-color: #e0f0ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Focus Event Example</h3>
+    <p>Click vào ô nhập để thấy sự kiện <code>focus</code> được kích hoạt:</p>
+
+    <input
+      type="text"
+      id="myInput"
+      placeholder="Nhập tên của bạn"
+      onfocus="handleFocus()"
+    />
+
+    <p id="result"></p>
+
+    <script>
+      function handleFocus() {
+        document.getElementById("result").innerHTML =
+          "Bạn đã focus vào ô nhập!";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.alert("Chào mừng bạn đã truy cập trang web!");
+    </script>
+    <label>Ngày tháng năm sinh: </label>
+
+    <select id="ngay"></select>
+    <select id="thang"></select>
+    <select id="nam"></select>
+    <script>
+      var d;
+      for (d = 1; d <= 31; d++) {
+        var op = document.createElement("option");
+        op.value = op.text = d;
+        document.getElementById("ngay").appendChild(op);
+      }
+
+      for (var m = 1; m <= 12; m++) {
+        var opt = document.createElement("option");
+        opt.value = opt.text = m;
+        document.getElementById("thang").appendChild(opt);
+      }
+
+      for (var y = 1900; y <= 2025; y++) {
+        var opt = document.createElement("option");
+        opt.value = opt.text = y;
+        document.getElementById("nam").appendChild(opt);
+      }
+    </script>
+  </body>
+</html>

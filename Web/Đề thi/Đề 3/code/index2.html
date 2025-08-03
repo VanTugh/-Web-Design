@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" style="align-items: center;">
+        <table>
+            <tr>
+                <td>
+                    <p>Nhập số thứ nhất</p>
+                </td>
+                <td><input type="text" id="inp1"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Nhập số thứ hai</p>
+                </td>
+                <td><input type="text" id="inp2"></td>
+            </tr>
+            <tr>
+                <td>UCLN của hai số trên</td>
+                <td><input type="text" id="outp"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="solve(event)">Tìm</button></td>
+                <td><button type="submit">Hủy bỏ</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+
+
+    function gcd(a, b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+    }
+    function solve(event) {
+        if (event) event.preventDefault();
+        let num1 = parseInt(document.getElementById("inp1").value);
+        let num2 = parseInt(document.getElementById("inp2").value);
+        let result = gcd(num1, num2);
+        document.getElementById("outp").value = result;
+    }
+</script>
+
+</html>

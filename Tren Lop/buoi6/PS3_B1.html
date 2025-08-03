@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>a =</th>
+        <td><input type="number" id="a" /></td>
+      </tr>
+
+      <tr>
+        <th>b =</th>
+        <td><input type="number" id="b" /></td>
+      </tr>
+      <tr>
+        <th>c =</th>
+        <td><input type="number" id="c" /></td>
+      </tr>
+      <tr>
+        <th>a' =</th>
+        <td><input type="number" id="a'" /></td>
+      </tr>
+      <tr>
+        <th>b' =</th>
+        <td><input type="number" id="b'" /></td>
+      </tr>
+      <tr>
+        <th>c' =</th>
+        <td><input type="number" id="c'" /></td>
+      </tr>
+      <tr>
+        <td>
+          ket qua : ax +by= c <br />
+          ket qua : a'x +b'y= c' <br />
+          <button onclick="ADD()">KẾT QUẢ NÈ</button>
+        </td>
+        <td><p id="result"></p></td>
+      </tr>
+    </table>
+
+    <script>
+      function ADD() {
+        const a = parseFloat(document.getElementById("a").value);
+        const b = parseFloat(document.getElementById("b").value);
+        const c = parseFloat(document.getElementById("c").value);
+        const d = parseFloat(document.getElementById("a'").value);
+        const e = parseFloat(document.getElementById("b'").value);
+        const f = parseFloat(document.getElementById("c'").value);
+
+        const kq = document.getElementById("result");
+
+        const D = a * e - d * b;
+        const Dx = c * e - f * b;
+        const Dy = a * f - d * c;
+        if (D !== 0) {
+          const x = Dx / D;
+          const y = Dy / D;
+          kq.innerText = "x = " + x + ", y = " + y;
+        } else if (Dx === 0 && Dy === 0) {
+          kq.innerText = "Hệ phương trình vô số nghiệm";
+        } else {
+          kq.innerText = "Hệ phương trình vô nghiệm";
+        }
+      }
+    </script>
+  </body>
+</html>

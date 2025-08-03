@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var mang = "nguyen van tung ";
+      var cumtu = mang.split(" ");
+      for (var i = 0; i < cumtu.length; i++) {
+        var tu = cumtu[i];
+        if (tu.length > 1) {
+          cumtu[i] = tu[0].toUpperCase() + tu.slice(1);
+        }
+      }
+      var kq = cumtu.join(" ");
+      document.write(kq);
+    </script>
+  </body>
+</html>

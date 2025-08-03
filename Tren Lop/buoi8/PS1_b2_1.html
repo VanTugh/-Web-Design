@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đếm số xuất hiện nhiều nhất</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      var n = 10;
+      for (var i = 0; i < 40; i++) {
+        var mang = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+        arr.push(mang);
+      }
+      console.log(100, 1000);
+
+      var m1 = arr.sort(function (a, b) {
+        return a - b;
+      });
+
+      document.write("Mảng sau khi sắp xếp: " + m1 + "<br>");
+
+      var mang = {};
+      var maxdem = 0;
+      var nhieudem;
+
+      for (var i = 0; i < m1.length; i++) {
+        var value = m1[i];
+
+        if (mang[value]) {
+          mang[value]++;
+        } else {
+          mang[value] = 1;
+        }
+
+        if (mang[value] > maxdem) {
+          maxdem = mang[value];
+          nhieudem = value;
+        }
+      }
+
+      document.write("Giá trị xuất hiện nhiều nhất: " + nhieudem + "<br>");
+      document.write("Số lần xuất hiện: " + maxdem);
+    </script>
+  </body>
+</html>

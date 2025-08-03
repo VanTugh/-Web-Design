@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="test"></p>
+    <script>
+      var a = 4,
+        b = 6,
+        c = 2;
+      var delta = b * b - 4 * a * c;
+      var result = "";
+      if (delta < 0) {
+        result = "Phương trình vô nghiệm";
+      } else if (delta === 0) {
+        var x = -b / (2 * a);
+        result = "Phương trình có nghiệm kép x = " + x;
+      } else {
+        var x1 = -b + Math.sqrt(delta) / (2 * a);
+        var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        result = "Phương trình có 2 nghiệm:<br>x1 = " + x1 + "<br>x2 = " + x2;
+      }
+      document.getElementById("test").innerHTML = result;
+    </script>
+  </body>
+</html>

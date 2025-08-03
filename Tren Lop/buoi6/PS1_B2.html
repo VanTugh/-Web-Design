@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máy tính cộng</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <div style="margin: 40px">
+      <button onclick="addNumber('1')">1</button>
+      <button onclick="addNumber('2')">2</button>
+      <button onclick="addNumber('3')">3</button>
+      <button onclick="addNumber('4')">4</button>
+      <button onclick="addNumber('5')">5</button>
+      <button onclick="addCong('+')">+</button>
+      <br />
+      <button onclick="addNumber('6')">6</button>
+      <button onclick="addNumber('7')">7</button>
+      <button onclick="addNumber('8')">8</button>
+      <button onclick="addNumber('9')">9</button>
+      <button onclick="addNumber('0')">0</button>
+      <button onclick="calculate()">=</button>
+    </div>
+
+    <script>
+      let ketqua = "";
+
+      function addNumber(num) {
+        ketqua += num;
+        document.getElementById("result").innerText = ketqua;
+      }
+
+      function addCong(op) {
+        if (!ketqua.includes("+")) {
+          ketqua += op;
+          document.getElementById("result").innerText = ketqua;
+        }
+      }
+
+      function calculate() {
+        const parts = ketqua.split("+");
+        if (parts.length === 2) {
+          const result = parseInt(parts[0]) + parseInt(parts[1]);
+          document.getElementById("result").innerText = result;
+          ketqua = "" + result;
+        } else {
+          alert("Vui lòng nhập đúng định dạng: số + số");
+        }
+      }
+    </script>
+  </body>
+</html>

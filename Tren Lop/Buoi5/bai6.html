@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính lương nhân viên</title>
+  </head>
+  <body>
+    <script>
+      let ngayCong = parseInt(prompt("Nhập vào số ngày công:"));
+      let gioLam = parseInt(prompt("Nhập vào số giờ làm mỗi ngày:"));
+      let loaiNhanVien = prompt("Nhập vào xếp hạng nhân viên (A, B, C):");
+
+      let luong = gioLam * 20000 * ngayCong;
+      let thuong = 0;
+
+      if (loaiNhanVien === "A" && ngayCong > 25) {
+        thuong = 500000;
+      } else if (loaiNhanVien === "B" && ngayCong > 20) {
+        thuong = 300000;
+      }
+
+      let tong = luong + thuong;
+
+      document.write(
+        "Tổng tiền lương + thưởng là: " + tong.toLocaleString() + " VND<br>"
+      );
+    </script>
+  </body>
+</html>

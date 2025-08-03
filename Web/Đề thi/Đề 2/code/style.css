@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #336699;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.header .logo {
+    height: 90px;
+    width: 150px;
+}
+
+.header .search-box input {
+    width: 250px;
+    height: 30px;
+    color: gray;
+    padding: 3px;
+}
+
+.header .search-box button {
+    height: 30px;
+    width: 70px;
+    background-color: black;
+    color: white;
+}
+
+.header .cart {
+    width: 130px;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    align-items: center;
+    padding: 5px;
+}
+
+.header .cart img {
+    height: 30px;
+    width: 30px;
+}
+
+.header .cart a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .cart a:hover {
+    color: red;
+}
+
+.container {
+    display: flex;
+    /* height: 700px; */
+}
+
+.menu {
+    border: 1px solid #336699;
+    margin-left: 1px;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-top: 1px solid gray;
+}
+
+.menu .menu-header {
+    background-color: #336699;
+    color: white;
+}
+
+.menu .cap1:hover {
+    color: #336699;
+}
+
+.menu .cap2 {
+    position: relative;
+}
+
+.menu .cap2 ul li {
+    list-style: none;
+}
+
+.menu .cap2 .submenu {
+    position: absolute;
+    display: none;
+}
+
+.menu .cap2:hover .submenu {
+    display: block;
+    left: 101%;
+    top: 0%;
+}
+
+.submenu {
+    background-color: white;
+    color: black;
+    width: 80px;
+    /* padding: 10px; */
+}
+
+.content {
+    background-color: white;
+    width: 80%;
+    margin-left: 100px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(221, 219, 219);
+}
+
+.content-main {
+    flex-wrap: wrap;
+    padding: 5px;
+    display: flex;
+}
+
+.content1 {
+    width: 230px;
+    margin-right: 30px;
+}
+
+.content1 .content-logo {
+    height: 200px;
+    width: 100%;
+}
+
+.content1 .price {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+    align-items: center;
+}

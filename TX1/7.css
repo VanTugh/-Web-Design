@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 1000px;
+}
+.first {
+  display: flex;
+  padding: 10px;
+  color: aliceblue;
+  background-color: brown;
+  align-items: center;
+}
+.first img {
+  width: 100px;
+  border-radius: 49%;
+}
+.first h1 {
+  padding-left: 10px;
+}
+.menu {
+  background-color: aliceblue;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid black;
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+}
+.menu ul li a {
+  color: black;
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  color: aliceblue;
+}
+.slide_bar {
+  background-color: rgb(165, 108, 42);
+  padding-left: 10px;
+}
+.slide_bar h3 {
+  background-color: orange;
+}
+.slide_bar ul {
+  background-color: brown;
+  width: 200px;
+}
+.slide_bar ul li {
+  list-style: square;
+  padding: 10px;
+  gap: 20px;
+  border: 1px solid;
+}
+.slide_bar ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.big {
+  width: 800px;
+  height: 200px;
+}
+.content h4 {
+  background-color: orange;
+  padding: 10px;
+}
+.tren {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  padding-top: 10px;
+}
+.item p {
+  background-color: rgb(198, 163, 118);
+  padding: 10px 10px;
+}
+.duoi {
+  display: flex;
+  justify-content: space-between;
+}
+.last p {
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+}
+footer {
+  background-color: rgb(198, 163, 118);
+  text-align: center;
+}
+.slide_bar ul li {
+  position: relative;
+}
+.slide_bar ul li .dropdown {
+  position: absolute;
+  display: none;
+}
+.slide_bar ul li:hover ul {
+  display: block;
+}
+.slide_bar ul li {
+  list-style: none;
+}
+.slide_bar ul li ul {
+  top: 0;
+  left: 199px;
+}
+
+.slide_bar li:hover {
+  background-color: rgb(231, 94, 31);
+}
+.menu ul li {
+  position: relative;
+}
+.menu ul li ul.sub {
+  position: absolute;
+  display: none;
+}
+.menu ul li:hover .sub {
+  display: block;
+  top: 39px;
+  left: 0px;
+}
+.menu ul li ul li {
+  width: 142px;
+  background-color: brown;
+}
+.menu ul li:hover {
+  background-color: rgb(231, 94, 31);
+}

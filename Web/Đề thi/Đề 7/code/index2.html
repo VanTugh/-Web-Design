@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table style="align-items: center;">
+            <tr>
+                <td>Tháng</td>
+                <td><input type="text" id="inpT"></td>
+            </tr>
+            <tr>
+                <td>Năm</td>
+                <td><input type="text" id="inpN"></td>
+            </tr>
+            <tr>
+                <td>Số ngày</td>
+                <td><input type="text" id="outp"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="solve(event)">Hiện thị số ngày của tháng</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function solve(event) {
+        if (event) event.preventDefault();
+
+        let m = parseInt(document.getElementById("inpT").value);
+        let y = parseInt(document.getElementById("inpN").value);
+
+        let ans = 0;
+        if (m == 2) {
+            if (y % 4 == 0) ans = 28;
+            else ans = 29;
+        }
+        else if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) ans = 30;
+        else ans = 31;
+
+        document.getElementById("outp").value = ans;
+    }
+</script>
+
+</html>

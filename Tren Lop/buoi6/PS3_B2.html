@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript có thể kiểm soát form</h2>
+    <form onsubmit="return kiemTra()">
+      <label>Hãy nhập số vào hộp text (từ 1 đến 10):</label><br />
+      <input type="text" id="so" />
+      <input type="submit" value="Submit" />
+    </form>
+    <p id="thongbao"></p>
+
+    <script>
+      function kiemTra(event) {
+        event.preventDefault();
+
+        const num = document.getElementById("so").value.trim();
+        const atten = document.getElementById("thongbao");
+
+        // Kiểm tra có phải toàn bộ chuỗi là số nguyên
+        if (!/^\d+$/.test(num)) {
+          atten.innerText = "Sai rồi: chỉ được nhập số nguyên";
+          return false;
+        }
+
+        const real_num = parseInt(num);
+        if (real_num < 1 || real_num > 10) {
+          atten.innerText = "Sai rồi: phải từ 1 đến 10";
+          return false;
+        }
+
+        atten.innerText = "Đúng rồi!";
+        return true;
+      }
+
+      document.querySelector("form").addEventListener("submit", kiemTra);
+    </script>
+  </body>
+</html>
