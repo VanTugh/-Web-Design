@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1500px;
+      }
+      .head {
+        background-image: url(/BTVN/Bai2/Screenshot\ 2025-06-18\ 003954.png);
+        background-size: 100%;
+        display: flex;
+      }
+      .head img {
+        width: 100px;
+        height: 50px;
+        padding: 20px;
+      }
+      .banner {
+        text-align: center;
+        width: 90%;
+      }
+      .banner h2 {
+        margin-bottom: 10px;
+        color: #0033cc;
+      }
+      .menu {
+        background-color: #33ccff;
+      }
+      .menu ul {
+        display: flex;
+      }
+      .menu ul li {
+        list-style: none;
+        width: 15%;
+        border: 1px solid white;
+        text-align: center;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      .menu ul li:hover a {
+        color: yellow;
+      }
+      .header {
+        display: flex;
+        color: aliceblue;
+        background-color: #0066ff;
+      }
+      .header i {
+        padding: 5px 30px;
+      }
+      .slidebar {
+        background-color: #5c8cec;
+        width: 300px;
+        height: 100%;
+      }
+      .slidebar ul li {
+        list-style: none;
+        padding: 20px;
+        border: 1px solid white;
+      }
+      .slidebar ul li a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      .slidebar ul li {
+        position: relative;
+      }
+      .slidebar ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        min-width: 150px;
+        top: -3px;
+        left: 290px;
+        background-color: #99b9e8;
+      }
+      .slidebar ul li:hover ul.dropdown {
+        display: block;
+      }
+      .slidebar ul li:hover a {
+        color: yellow;
+      }
+      .main {
+        display: flex;
+      }
+      .link {
+        display: flex;
+        padding: 10px;
+      }
+      .link a {
+        padding-left: 900px;
+      }
+      .content {
+        width: 1200px;
+      }
+      .image {
+        display: flex;
+      }
+      .left {
+        width: 300px;
+      }
+      .left img {
+        width: 250px;
+        height: 200px;
+      }
+      .item {
+        text-align: center;
+      }
+      .item img {
+        height: 250px;
+        width: 300px;
+        padding: 10px;
+      }
+      .right {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+      <div class="banner">
+        <h2>BAO THACH MINERAL & PRODUCTION COMPANY LIMITED</h2>
+        <p>
+          Addreaa But Phong village, Lien Son commune, Kim Bong, Ha Nam Province
+        </p>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">Trang chủ</a></li>
+        <li><a href="">Sản phẩm</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="">Tin tức</a></li>
+        <li><a href="">Liên hệ</a></li>
+        <li>
+          <a href=""
+            ><i class="fa-solid fa-image"></i> <i class="fa-solid fa-image"></i
+          ></a>
+        </li>
+        <li>
+          <a href=""
+            ><input type="text" placeholder="Nhập sản phẩm cần tìm kiếm"
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="slidebar">
+        <div class="header">
+          <i class="fa-solid fa-list"></i>
+          <h2>THEO ỨNG DỤNG</h2>
+        </div>
+        <ul>
+          <li><a href="">NL Ngành thức ăn chăn nuôi</a></li>
+          <li><a href="">NL Ngành thủy hải sản</a></li>
+          <li><a href="">NL Ngành SX phân bón</a></li>
+          <li><a href="">Nguyên Vật Liệu Xây Dựng</a></li>
+          <li>
+            <a href="">Các ngành khác</a>
+            <ul class="dropdown">
+              <li><a href="">NL ngành kính</a></li>
+              <li><a href="">NL ngành luyện kim</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="link">
+          <h3>SỎI QUAY NHÂN TẠO</h3>
+          <a href="">Xem tất cả</a>
+        </div>
+        <hr />
+        <div class="image">
+          <div class="left">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+          </div>
+          <div class="right">
+            <div class="tren">
+              <div class="item">
+                <img src="/BTVN/Bai2/images.jpg" alt="" />
+                <h3>Đá nhà trang trí</h3>
+                <p>Liên hệ</p>
+              </div>
+              <!-- end item -->
+              <div class="item">
+                <img src="/BTVN/Bai2/images.jpg" alt="" />
+                <h3>Đá nhà trang trí</h3>
+                <p>Liên hệ</p>
+              </div>
+              <!-- end item -->
+            </div>
+            <div class="giua">
+              <div class="item">
+                <img src="/BTVN/Bai2/images.jpg" alt="" />
+                <h3>Đá nhà trang trí</h3>
+                <p>Liên hệ</p>
+              </div>
+              <!-- end item -->
+              <div class="item">
+                <img src="/BTVN/Bai2/images.jpg" alt="" />
+                <h3>Đá nhà trang trí</h3>
+                <p>Liên hệ</p>
+              </div>
+              <!-- end item -->
+            </div>
+            <div class="duoi">
+              <div class="item">
+                <img src="/BTVN/Bai2/images.jpg" alt="" />
+                <h3>Đá nhà trang trí</h3>
+                <p>Liên hệ</p>
+              </div>
+              <!-- end item -->
+              <div class="item">
+                <img src="/BTVN/Bai2/images.jpg" alt="" />
+                <h3>Đá nhà trang trí</h3>
+                <p>Liên hệ</p>
+              </div>
+              <!-- end item -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhaplieu">
+      <label for="">User name : </label>
+      <input type="text" id="name" />
+      <label for="">Password : </label>
+      <input type="text" id="pass" />
+      <button onclick="tinh()">Kiểm tra password</button>
+      <p id="thongbao"></p>
+    </div>
+
+    <script>
+      function tinh() {
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pass").value;
+        const thongbao = document.getElementById("thongbao");
+
+        if (name === "" || pass === "") {
+          thongbao.textContent = "Không được để trống Username hoặc Password.";
+          return;
+        }
+
+        const dieuKienDoDai = pass.length >= 8;
+        const dieuKienInHoa = /[A-Z]/.test(pass);
+        const dieuKienBatDau = !/^[0-9]/.test(pass);
+
+        if (dieuKienDoDai && dieuKienInHoa && dieuKienBatDau) {
+          thongbao.textContent = "Bạn nhập đúng";
+        } else {
+          thongbao.textContent = "Bạn nhập sai";
+        }
+      }
+    </script>
+  </body>
+</html>
