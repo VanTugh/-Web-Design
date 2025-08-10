@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src=""></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1200px;
+      }
+      .one {
+        display: flex;
+        background-color: #336699;
+        color: aliceblue;
+      }
+      .one img {
+        width: 120px;
+        height: 40px;
+        padding: 10px;
+      }
+      .search {
+        display: flex;
+      }
+      .search select {
+        width: 300px;
+        height: 37px;
+        margin-top: 10px;
+      }
+      .search input {
+        width: 300px;
+        height: 30px;
+        margin-top: 10px;
+      }
+      .search i {
+        background-color: black;
+        text-align: center;
+        margin-top: 10px;
+        width: 20px;
+        height: 32px;
+      }
+      .search p {
+        background-color: black;
+        text-align: center;
+        margin-top: 10px;
+        width: 50px;
+        height: 32px;
+      }
+      .cart {
+        margin: 20px;
+      }
+      .cart a {
+        color: aliceblue;
+      }
+      .user {
+        width: 200px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .user i {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #092642;
+      }
+      .left {
+        width: 300px;
+        border: 1px solid blue;
+      }
+      .left h2 {
+        background-color: #336699;
+        color: aliceblue;
+        padding: 10px;
+      }
+      .left ul li {
+        list-style: none;
+        padding: 10px;
+        border: 1px solid rgb(210, 210, 219);
+        position: relative;
+      }
+      .left ul li a {
+        text-decoration: none;
+      }
+      .left ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 300px;
+        min-width: 100px;
+      }
+      .left ul li:hover ul.dropdown {
+        display: block;
+      }
+
+      .tren,
+      .duoi {
+        display: flex;
+      }
+      .main {
+        display: flex;
+      }
+      .price {
+        display: flex;
+      }
+      .price i {
+        padding: 10px;
+        padding-left: 80px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <img src="/BTVN/Bai2/Screenshot 2025-06-18 003954.png" alt="" />
+      <div class="search">
+        <select>
+          <option value="">All Categories</option>
+          <option value="">All Categories</option>
+          <option value="">All Categories</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Search for Product"
+          class="search-box"
+        />
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>Search</p>
+      </div>
+      <div class="cart">
+        <a href="#" class="cart" style="text-decoration: none">Cart</a>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <div class="user">
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <h2>ALL CATEGROLY</h2>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Blog</a></li>
+          <li>
+            <a href="">Laptops</a>
+            <ul class="dropdown">
+              <li>
+                <a href=""
+                  >Dell (0)
+                  <hr
+                /></a>
+              </li>
+              <li><a href="">Men (0)</a></li>
+              <li><a href="">Purse (0)</a></li>
+            </ul>
+          </li>
+          <li><a href="">Shocks</a></li>
+          <li><a href="">Cloth</a></li>
+          <li><a href="">Cosmetic</a></li>
+          <li><a href="">Desktops</a></li>
+          <li><a href="">Kids</a></li>
+          <li><a href="">MP3 players</a></li>
+          <li><a href="">Perfume</a></li>
+          <li><a href="">+ More</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="tren">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+        </div>
+        <div class="duoi">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Bộ Cây h61.g2030 ram 4g, ssd120g, vga gt730, màn 20"</p>
+            <div class="price">
+              <div class="tien">
+                <p>5.250.000 đ</p>
+                <p style="text-decoration: line-through; color: red">
+                  6.250.000 đ
+                </p>
+              </div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <!-- end item -->
+        </div>
+      </div>
+    </div>
+    <div class="tinh">
+      <label for="">Nhap vao so nguyen : </label>
+      <input type="text" id="num" />
+      <label for="">cac so le la :</label>
+      <input type="text" id="kq" />
+      <button onclick="tinh()">Tinh</button>
+      <button onclick="huybo()">Huy bo</button>
+    </div>
+    <script>
+      function tinh() {
+        var num = document.getElementById("num").value;
+        var le = [];
+        for (var i = 0; i < num.length; i++) {
+          var char = parseInt(num[i]);
+          if (!isNaN(char) && char % 2 != 0) {
+            le.push(num[i]);
+          }
+        }
+        document.getElementById("kq").value = le.join(" , ");
+      }
+      function huy() {
+        document.getElementById("num").value = " ";
+        document.getElementById("kq").value = " ";
+      }
+    </script>
+  </body>
+</html>
+x`
