@@ -47,21 +47,18 @@
       function tinh() {
         const luongcoban = 6500;
         const thang = parseInt(document.getElementById("thang").value);
-
         let heso = 1.2;
-        if (thang < 12) {
+        if (thang <= 12) {
           heso = 1.2;
         } else if (thang <= 36) {
-          heso = 2.8;
+          heso = 2.5;
         } else {
           heso = 3;
         }
-
         const luongthang = luongcoban * heso;
-        const thue = luongthang * 0.1;
+        const thue = luongthang * 0.2;
         const thuclinh = luongthang - thue;
 
-        // Gán kết quả vào các ô
         document.getElementById("luongcoban").value = luongcoban;
         document.getElementById("heso").value = heso;
         document.getElementById("luongthang").value = luongthang.toFixed(2);

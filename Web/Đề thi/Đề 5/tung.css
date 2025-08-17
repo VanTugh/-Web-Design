@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 1500px;
+}
+.one {
+  display: flex;
+  justify-content: space-between;
+}
+.logo img {
+  width: 100px;
+  height: 30px;
+  padding: 10px 50px;
+}
+.search {
+  padding: 10px;
+}
+.cart {
+  padding: 10px;
+}
+.menu {
+  background-color: black;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul li {
+  list-style: none;
+  padding: 10px;
+  position: relative;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.menu ul li ul.dropdown {
+  position: absolute;
+  display: none;
+  min-width: 120px;
+  left: 0;
+  top: 38px;
+}
+.menu ul li:hover ul.dropdown {
+  display: block;
+}
+.menu ul li:hover {
+  background-color: #ff3399;
+}
+.link {
+  display: flex;
+}
+.imgg {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.char {
+  margin: 10px;
+}
+.num {
+  margin: 10px;
+}
+.right {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.boxx {
+  padding: 10px;
+  background-color: black;
+  color: aliceblue;
+}
+.giua {
+  width: 900px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  margin: 20px;
+}
+.item img {
+  width: 400px;
+}
+.text {
+  background-color: aqua;
+  text-align: center;
+}
+.red {
+  color: #ff3399;
+}
+.rel {
+  text-decoration: line-through;
+}

@@ -8,14 +8,14 @@
   <body>
     <script>
       var mang = "nguyen van tung ";
-      var cumtu = mang.split(" ");
-      for (var i = 0; i < cumtu.length; i++) {
-        var tu = cumtu[i];
+      var mang_new = mang.split(" ");
+      for (var i = 0; i < mang_new.length; i++) {
+        var tu = mang_new[i];
         if (tu.length > 1) {
-          cumtu[i] = tu[0].toUpperCase() + tu.slice(1);
+          mang_new[i] = tu[0].toUpperCase() + tu.slice(1);
         }
       }
-      var kq = cumtu.join(" ");
+      var kq = mang_new.join(" ");
       document.write(kq);
     </script>
   </body>

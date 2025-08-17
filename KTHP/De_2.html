@@ -262,7 +262,7 @@
       function hienthi() {
         let input = document.getElementById("fir").value;
         input = input.trim().toLowerCase().replace(/\s+/g, " ");
-        let words = input.split(" ");
+        var words = input.split(" ");
         for (let i = 0; i < words.length; i++) {
           words[i] = words[i].charAt(0) + words[i].slice(1);
         }
