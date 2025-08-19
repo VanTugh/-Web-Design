@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1500px;
+      }
+      .logo img {
+        width: 120px;
+        height: 50px;
+        padding: 10px;
+      }
+      .box {
+        width: 1200px;
+      }
+      .header {
+        display: flex;
+      }
+      .cart img {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 60%;
+      }
+      .cart {
+        display: flex;
+        padding: 10px;
+      }
+      .menu {
+        background-color: #ff3399;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+        padding-top: 5px;
+      }
+      .menu ul li a {
+        color: aliceblue;
+        text-decoration: none;
+        padding: 15px;
+      }
+      .menu ul li a img {
+        width: 20px;
+        margin-top: 5px;
+      }
+      .menu ul li a input {
+        margin: 10px 0px 10px 10px;
+      }
+      .main {
+        display: flex;
+      }
+      .slide_bar {
+        width: 200px;
+        border: 1px solid #999999;
+      }
+      .slide_bar ul li {
+        list-style: none;
+        padding: 10px;
+      }
+      .slide_bar ul li a {
+        text-decoration: none;
+      }
+      .slide_bar ul li {
+        position: relative;
+      }
+      .slide_bar ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        min-width: 120px;
+        top: 0;
+        left: 100px;
+      }
+      .slide_bar ul li:hover .dropdown {
+        display: block;
+      }
+      .tren {
+        display: flex;
+      }
+      .duoi {
+        display: flex;
+      }
+      .content {
+        text-align: center;
+      }
+      .item {
+        padding: 10px;
+      }
+      .item img {
+        width: 240px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+      </div>
+      <div class="box"></div>
+      <div class="cart">
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+        <div class="chu">
+          <h3>CART</h3>
+          <p>0-items</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Brands</a></li>
+        <li><a href="">Gift certificate</a></li>
+        <li><a href="">More</a></li>
+        <li>
+          <a href="">
+            <input type="text" placeholder="Search" />
+            <select>
+              <option>Categories</option>
+            </select>
+            <img src="/BTVN/Bai2/images.jpg" alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="slide_bar">
+        <ul>
+          <li><a href="" style="background-color: #ffcc33">CATEGRORIES</a></li>
+          <li><a href="">Roses</a></li>
+          <li>
+            <a href="">Flower basket</a>
+            <ul class="dropdown">
+              <li><a href="">MACS</a></li>
+              <li><a href="">WINDOWS</a></li>
+            </ul>
+          </li>
+          <li><a href="">Gerberas</a></li>
+          <li><a href="">Orchilds</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <hr />
+        <h3>HONG EUCUADOR</h3>
+
+        <div class="tren">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+        </div>
+        <hr />
+        <h3>LAN HO DIEP</h3>
+        <div class="duoi">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Hong eucuador</h4>
+            <p>Ecuador rainbow</p>
+            <p>2.500.000VND</p>
+          </div>
+          <!-- end item -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

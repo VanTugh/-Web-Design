@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giải phương trình bậc 2</title>
+    <style>
+      textarea {
+        width: 250px;
+        height: 80px;
+        padding: 10px;
+        resize: none;
+      }
+       table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Giải phương trình bậc 2: ax² + bx + c = 0</h3>
+
+    <label for="">Nhập a: </label>
+    <input type="number" id="a" /> <br />
+    <label for="">Nhập b: </label>
+    <input type="number" id="b" /> <br />
+    <label for="">Nhập c: </label>
+    <input type="number" id="c" /> <br /><br />
+
+    <label for="">Kết quả: </label><br />
+    <textarea id="result" readonly></textarea><br /><br />
+
+    <button onclick="tinh()">TÍNH</button>
+
+    <script>
+      function tinh() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let c = parseFloat(document.getElementById("c").value);
+
+        let result = document.getElementById("result");
+        result.value = ""; // reset
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+          alert("Vui lòng nhập đủ a, b, c!");
+          return;
+        }
+
+        if (a === 0) {
+          if (b === 0) {
+            result.value = c === 0 ? "Vô số nghiệm" : "Vô nghiệm";
+          } else {
+            result.value = "Phương trình bậc 1\nx = " + -c / b;
+          }
+        } else {
+          let delta = b * b - 4 * a * c;
+          if (delta < 0) {
+            result.value = "Vô nghiệm";
+          } else if (delta === 0) {
+            let x = -b / (2 * a);
+            result.value = "Nghiệm kép:\n" + "x = " + x;
+          } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            result.value =
+              "2 nghiệm phân biệt:\n" + "x1 = " + x1 + "\n" + "x2 = " + x2;
+          }
+        }
+      }
+    </script>
+    <!-- dem so tu = 4 bat dau bang m -->
+      <label for="">Nhập chuỗi: </label>
+  <input type="text" id="chuoi" />
+  <hr />
+  <label for="">Số từ có 4 ký tự bắt đầu bằng m:</label>
+  <input type="text" id="kq" readonly />
+  <hr />
+  <button onclick="tim()">Tìm</button>
+  <button onclick="huy()">Hủy bỏ</button>
+</div>
+<script>
+    function tim()
+    {
+        var text = document.getElementById("chuoi").value.trim();
+        var new_text=text.split(/\s+/);
+        var dem =0;
+        for(var i=0;i<new_text.length;i++)
+    {
+        if (new_text[i].length==4 && new_text[i].charAt(0)=='m')
+    {
+        dem++;
+    }
+    document.getElementById("kq").value = dem;
+    }
+    }
+</script>
+<!-- hien thi ten -->
+ <div class="scr">
+      <label for="">Ho va ten : </label>
+      <input type="text" id="fir" />
+      <label for="">Ten : </label>
+      <input type="text" id="last" />
+      <button onclick="hienthi()">Hien Thi</button>
+      <button onclick="huybo()">Huy Bo</button>
+    </div>
+    <script>
+        function hienthi()
+        {
+            var name = document.getElementById("fir").value;
+            name = name.trim().toLowerCase().replace(/\s+/g," ");
+            var new_text = name.split(" ");
+            for(var i=0;i<new_text.length;i++)
+        {
+            new_text[i]=new_text[i].charAt(0)+new_text[i].slice(1);
+        }
+        var new_name=new_text[new_text.length-1];
+        document.getElementById("last").value=new_name;
+        }
+    </script>
+    <table style="border: 1px solid black">
+      <tr>
+        <td>Chương trình tra tuổi</td>
+      </tr>
+      <tr>
+        <th>Tuổi dương lịch</th>
+        <td><input type="number" id="duong_lich" /></td>
+      </tr>
+      <tr>
+        <th>Tuổi âm lịch</th>
+        <td><input type="text" id="am_lich" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="xóa" onclick="reset()" /></td>
+        <td><input type="button" value="tra cứu" onclick="traCuu()" /></td>
+      </tr>
+      <script>
+        function traCuu()
+        {
+            const can = [
+        "Canh",
+        "Tân",
+        "Nhâm",
+        "Quí",
+        "Giáp",
+        "Ất",
+        "Bính",
+        "Đinh",
+        "Mậu",
+        "Kỷ",
+      ];
+      const chi = [
+        "Thân",
+        "Dậu",
+        "Tuất",
+        "Hợi",
+        "Tý",
+        "Sửu",
+        "Dần",
+        "Mão",
+        "Thìn",
+        "Tỵ",
+        "Ngọ",
+        "Mùi",
+      ];
+      let ngay = parseInt(document.getElementById("duong_lich").value);
+      let canI= ngay % 10;
+      let chiI= ngay % 12;
+      document.getElementById("am_lich").value = can[canI] + " " +  chi[chiI];
+
+        }
+        function reset()
+        {
+            document.getElementById("duong_lich").value= " ";
+            document.getElementById("am_lich    ").value= " ";
+        }
+      </script>
+    </table>
+    <hr>
+    <br>
+    <br>
+<h2>JavaScript có thể kiểm soát form</h2>
+<form id="myForm">
+  <label>Hãy nhập số vào hộp text (từ 1 đến 10):</label><br />
+  <input type="text" id="so" />
+  <input type="submit" value="Submit" />
+</form>
+<p id="thongbao"></p>
+
+<script>
+  function kiemTra(event) {
+    event.preventDefault(); // chặn form reload
+    let number = parseInt(document.getElementById("so").value);
+
+    if (number < 1 || number > 10 || isNaN(number)) {
+      document.getElementById("thongbao").innerText = "nhập lại!";
+    } else {
+      document.getElementById("thongbao").innerText = "chuẩn rồi!";
+    }
+  }
+
+  document.querySelector("#myForm").addEventListener("submit", kiemTra);
+</script>
+<div class="tinh">
+  <table>
+    <h2>Tinh tien karaoke</h2>
+    <tr>
+      <th>Gio bat dau : </th>
+      <td> <input type="number" id="start">(h)</td>
+    </tr>
+    <tr>
+      <th>Gio ket thuc :</th>
+      <td><input type="number" id="end">(h)</td>
+    </tr>
+    <tr>
+      <th>Tien thanh toan : </th>
+      <td><input type="number" id="thanhtoan">(VND)</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td colspan="2">
+        <button onclick="tinh()">TINH</button>
+        <button onclick="xoa()">XOA</button>
+      </td>
+      
+    </tr>
+  </table>
+  <script>
+    function tinh()
+    {
+      let start = parseInt(document.getElementById("start").value);
+      let end = parseInt(document.getElementById("end").value);
+      let tien  = 0;
+      if(!isNaN(start) && !isNaN(end) && start<end && start>=10 && end <=24) 
+    {
+      let tien_20k = 0;
+      if(start < 17 )
+    {
+      tien_20k  = (Math.min(end,17) - start) * 20000;
+      tien+=tien_20k;
+    }
+    let tien_45k = 0;
+    if(end>=17)
+    {
+      tien_45k = (end - Math.max(start,17))*45000;
+      tien += tien_45k;
+    }
+    }
+    else
+    {
+      alert(" nhap lai !");
+    }
+    document.getElementById("thanhtoan").value = tien;
+  }
+  function xoa()
+  {
+    document.getElementById("thanhtoan").value = " ";
+    document.getElementById("start").value = " ";
+    document.getElementById("end").value = " ";
+  }
+  </script>
+</div>
+    <p>kiem tra xem co Tung khong </p>
+    <script>
+      var patt = /Tung/;
+      if (patt.test(" Anh la Nguyen Tung")) {
+        document.write(" co nha");
+      } else {
+        document.write(" khong co nha");
+      }
+    </script>
+<p>2.Kiểm tra chuỗi có ít nhất một chữ n</p>
+<script>
+  var text = " na na na ";
+  if(/n+/.test(text))
+{
+  document.write(" co nha");
+}
+else {
+        document.write(" khong co nha");
+      }
+</script>
+<p>3.Kiểm tra trong chuỗi có xuất hiện ký tự số hay không</p>
+<script>
+  var text = " na na na 010";
+  if(/[0-9]/.test(text))
+{
+  document.write(" co nha");
+}
+else {
+        document.write(" khong co nha");
+      }
+</script>
+    <p>4.Kiểm tra trong chuỗi không hoặc có xuất hiện số</p>
+<script>
+  var text = " na na na";
+  if(/[0-9]*/.test(text))
+{
+  document.write(" k co so nha");
+}
+else {
+        document.write(" co nha");
+      }
+</script>
+ <p>5.Kiểm tra trong chuỗi có chữ H hay không</p>
+<script>
+  var text = " ha na na";
+  if(/H/i.test(text))
+{
+  document.write(" co nha");
+}
+else {
+        document.write(" k co nha");
+      }
+</script>
+<p>7.Kiểm tra chuỗi xuất hiện ít nhất 10 chữ N liên tiếp và không phân biệt
+      chữ hoa chữ thường</p>
+  <script>
+  var text = " nannnnnnnnnn";
+  if(/n{10}/i.test(text))
+{
+  document.write(" co nha");
+}
+else {
+        document.write(" k co nha");
+      }
+</script>
+ <p>8.Kiểm tra chuỗi có phải là 'freetuts.net' hay không</p>
+  <script>
+  var text = "freetuts.net";
+  if(/^freetuts\.net$/i.test(text))
+{
+  document.write(" co nha");
+}
+else {
+        document.write(" k co nha");
+      }
+</script>
+<p>9.Kiểm tra chuỗi theo yêu cầu</p>
+<script>
+  var text = "Abc12nn@xyz.com";
+
+  // Regex:
+  // ^                : bắt đầu chuỗi
+  // [A-Z]            : bắt đầu bằng chữ cái viết hoa
+  // (?=.*[^A-Za-z0-9]): có ít nhất 1 ký tự đặc biệt
+  // (?=.*nn)         : có "nn"
+  // (?=(?:.*\d){2,}) : có ít nhất 2 chữ số
+  // .{9,}            : tổng độ dài ít nhất 10 ký tự
+  // \.com$           : kết thúc bằng ".com"
+  var regex = /^[A-Z](?=.*[^A-Za-z0-9])(?=.*nn)(?=(?:.*\d){2,}).{9,}\.com$/;
+
+  if (regex.test(text)) {
+    document.write("Chuỗi hợp lệ ✅");
+  } else {
+    document.write("Chuỗi không hợp lệ ❌");
+  }
+</script>
+<p>10.kiem tra chuoi</p>
+<script>
+  var text="AA@@";
+  // bat dau bang 2 chu hoa
+  // it nhat 2 kí tự đặc biệt
+  //.*$ → khớp phần còn lại của chuỗi.
+  var regex = /^[A-Z]{2}(?=(?:.*[^A-Za-z0-9]){2,}).*$/;
+if (regex.test(text)) {
+    document.write("Chuỗi hợp lệ ✅");
+  } else {
+    document.write("Chuỗi không hợp lệ ❌");
+  }
+</script>
+ <p>11.Kiểm tra chuỗi là các chữ số và dài 8 ký tự</p>
+    <script>
+      var text="88888888";
+  var regex = /[0-9]{8}/d;
+if (regex.test(text)) {
+    document.write("Chuỗi hợp lệ ✅");
+  } else {
+    document.write("Chuỗi không hợp lệ ❌");
+  }
+    </script>
+    <p>12. sap mang</p>
+    <script>
+      var arr =[-2,2,-4,34,4,56,1,7,8]
+      var new_arr= arr.sort(function(a,b)
+      {
+        return a-b;
+      }
+      )
+      document.write(new_arr)
+    </script>
+    <p>13. dem so xuat hien nhieu nhat</p>
+    <script>
+      var arr = [];
+      var n = 10;
+      for (var i = 0; i < 40; i++) {
+        var mang = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+        arr.push(mang);
+      }
+      console.log(100, 1000);
+      var new_arr= arr.sort(function(a,b)
+      {
+        return a-b;
+      }
+      )
+      document.write(new_arr)
+      var mang_dem = {};
+      var maxdem = 0;
+      var nhieudem;
+      for(var i= 0;i<new_arr.length;i++)
+      {
+        new_arr[i]=value;
+        if(mang_dem[value])
+      {
+        mang_dem[value]++;
+      }
+      else
+      {
+        mang_dem[value]=1;
+      }
+      }
+
+    </script>
+  </body>
+</html>
