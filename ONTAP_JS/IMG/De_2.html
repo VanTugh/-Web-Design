@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 1500px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .header img {
+        width: 120px;
+        height: 50px;
+      }
+      .search input {
+        width: 500px;
+        height: 35px;
+      }
+      .box {
+        background-color: aquamarine;
+        width: 35px;
+        height: 40px;
+        text-align: center;
+      }
+      .search,
+      .cart {
+        display: flex;
+      }
+      .cart:hover h4,
+      .cart:hover p {
+        color: aquamarine;
+      }
+      .menu {
+        background-color: aquamarine;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        padding: 10px;
+        list-style: none;
+        position: relative;
+      }
+      .menu ul li a {
+        color: aliceblue;
+        text-decoration: none;
+      }
+      .menu ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        background-color: rgb(76, 188, 151);
+        left: 10px;
+        top: 40px;
+        min-width: 180px;
+      }
+      .menu ul li:hover ul.dropdown {
+        display: block;
+      }
+      .dropdown li {
+        border: 1px solid wheat;
+      }
+      .menu ul li:hover {
+        background-color: rgb(60, 93, 82);
+      }
+      .content {
+        display: flex;
+      }
+      .tren {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item {
+        text-align: center;
+      }
+      .duoi {
+        display: flex;
+        justify-content: space-between;
+      }
+      .slide_bar {
+        width: 250px;
+        padding: 10px;
+        text-align: center;
+      }
+      .lg {
+        display: flex;
+        padding: 10px 10px 10px 0px;
+      }
+      .trong {
+        background-color: rgb(76, 72, 68);
+        width: 20px;
+      }
+      h3 {
+        padding: 10px;
+      }
+      .main {
+        width: 1200px;
+      }
+      .item img {
+        width: 280px;
+      }
+      .table {
+        background-color: rgb(89, 164, 218);
+        border: 1px solid black;
+        width: 320px;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,
+      td,
+      tr {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+      <div class="search">
+        <input type="text" placeholder="search items ......" />
+        <div class="box">0</div>
+      </div>
+      <div class="cart">
+        <div class="box" style="background-color: pink">0</div>
+        <div class="chu">
+          <h4>SHOPPING CART</h4>
+          <p>O items / 0-00$</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">GIỚI THIỆU</a></li>
+        <li><a href="">DỊCH VỤ</a></li>
+        <li>
+          <a href="">THỰC PHẨM TƯƠI SỐNG</a>
+          <ul class="dropdown">
+            <li><a href="">Rau , củ , quả</a></li>
+            <li><a href="">Thịt heo</a></li>
+            <li><a href="">Cá</a></li>
+            <li><a href="">Trứng</a></li>
+            <li><a href="">Gia vị</a></li>
+            <li><a href="">Thực phẩm khô</a></li>
+          </ul>
+        </li>
+        <li><a href="">SUẤT ĂN NÔNG NGHIỆP</a></li>
+        <li><a href="">TIN TỨC</a></li>
+        <li><a href="">LIÊN HỆ</a></li>
+        <li>
+          <a href="">
+            <div class="look">
+              <input type="text" placeholder="Nhập hàng hóa cần tìm ..." />
+              <div class="gift"></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="slide_bar">
+        <div class="lg">
+          <input type="text" placeholder="tim kiem...." />
+          <div class="trong"></div>
+        </div>
+        <h3 style="background-color: gray; color: green">RAU, CỦ, QUẢ TƯƠI</h3>
+        <h3>THÔNG TIN LIÊN HỆ</h3>
+        <hr style="color: beige" />
+        <img
+          src="/BTVN/Bai2/images.jpg"
+          alt=""
+          style="width: 120px; border-radius: 90%"
+        />
+        <h4 style="color: rgb(76, 76, 147)">HTPL HOÀNG VĂN TUẤN</h4>
+        <div class="sdt" style="padding: 10px">
+          <p>Giám đốc</p>
+          <p style="color: rgb(76, 76, 147)">- 098 7654 321</p>
+        </div>
+        <div class="email" style="padding: 10px">
+          <p>Email :</p>
+          <p style="color: rgb(76, 76, 147)">- ngueyne@gmail.com</p>
+        </div>
+        <hr style="color: beige" />
+        <img
+          src="/BTVN/Bai2/images.jpg"
+          alt=""
+          style="border-radius: 90%; width: 120px; padding: 10px"
+        />
+      </div>
+      <div class="main">
+        <hr />
+        <div class="tren">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+        </div>
+        <div class="duoi">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>RAU</p>
+          </div>
+          <!-- end of items -->
+        </div>
+      </div>
+    </div>
+    <div class="table">
+      <table>
+        <caption>
+          TÌM TỪ DÀI NHẤT
+        </caption>
+        <tr>
+          <th>Nhập xâu :</th>
+          <td><input type="text" id="chuoi" /></td>
+        </tr>
+        <tr>
+          <th>Thông báo kết quả :</th>
+          <td><input type="text" id="result" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button onclick="xoa()">Xóa</button>
+            <button onclick="tim()">Tìm kiếm</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function tim() {
+        let text = document.getElementById("chuoi").value;
+        let new_text = text.split(/\s+/);
+        let maxx = 0;
+        let kq = " ";
+        let vitri = -1;
+        for (var i = 0; i < new_text.length; i++) {
+          if (new_text[i].length > maxx) {
+            maxx = new_text[i].length;
+            kq = new_text[i];
+            vitri = i + 1;
+          }
+        }
+        document.getElementById("result").value = kq + " vi tri la : " + vitri;
+      }
+    </script>
+  </body>
+</html>

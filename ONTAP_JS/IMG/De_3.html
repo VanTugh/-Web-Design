@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        background-color: rgb(89, 164, 218);
+        border: 1px solid black;
+        width: 600px;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,
+      td,
+      tr {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      input {
+        width: 400px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .menu {
+        background-color: brown;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+        padding: 10px;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      body {
+        width: 1500px;
+      }
+      .header img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        padding: 10px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .chu {
+        text-align: center;
+        margin: 20px 0px 20px -150px;
+      }
+      .search {
+        margin-top: 40px;
+        display: flex;
+      }
+      .search input {
+        border: 2px solid yellow;
+        height: 23px;
+      }
+      .box {
+        background-color: yellow;
+        width: 27px;
+        height: 27px;
+      }
+      .call {
+        display: flex;
+        margin: 30px;
+      }
+      .call img {
+        width: 30px;
+        height: 30px;
+      }
+      .cart img {
+        width: 30px;
+        height: 30px;
+      }
+      .cart {
+        display: flex;
+        margin: 30px;
+      }
+      .low {
+        height: 30px;
+        width: 30px;
+        background-color: yellow;
+        margin-left: 10px;
+      }
+      .slide_bar {
+        background-color: antiquewhite;
+        width: 330px;
+        height: 100%;
+      }
+      .slide_bar ul li {
+        list-style: none;
+        padding: 10px;
+        position: relative;
+        border: 1px solid white;
+      }
+      .slide_bar ul li a {
+        text-decoration: none;
+      }
+      .slide_bar ul li .dropdown {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 170px;
+        background-color: rgb(240, 163, 49);
+      }
+      .slide_bar ul li:hover .dropdown {
+        display: block;
+      }
+      .slide_bar ul li:hover {
+        background-color: bisque;
+      }
+      .main {
+        display: flex;
+      }
+      .tren {
+        display: flex;
+        justify-content: space-between;
+      }
+      .duoi {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item {
+        text-align: center;
+        width: 290px;
+      }
+      .price {
+        display: flex;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .price p {
+        padding: 10px;
+      }
+      .item img {
+        width: 280px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="">Địa chỉ : số 66 , khu vực đường Láng - Đống Đa, Hà Nội</a>
+        </li>
+        <li><a href="">Mua hàng từ xa</a></li>
+        <li><a href="">Tin tức - khuyến mãi</a></li>
+        <li><a href="">Bản đồ</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="">Chăm sóc khách hàng</a></li>
+      </ul>
+    </div>
+    <div class="header">
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+      <div class="chu">
+        <h4 style="color: rgb(157, 180, 56)">Hàng chính hãng</h4>
+        <h3 style="color: black; border: 1px solid rgb(96, 96, 38)">
+          Giá tốt nhất
+        </h3>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm..." />
+        <div class="box"></div>
+      </div>
+      <div class="call">
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+        <div class="sdt">
+          <h4>Đường dây nóng</h4>
+          <p>09998 887 553</p>
+        </div>
+      </div>
+      <div class="cart">
+        <img src="/BTVN/Bai2/images.jpg" alt="" />
+        <div class="giohang">
+          <div class="low" style="color: aliceblue; text-align: center">0</div>
+          <p>Giỏ hàng</p>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="slide_bar">
+        <ul>
+          <li>
+            <a href="">Galaxy Note</a>
+            <ul class="dropdown">
+              <li><a href="">Galaxy Note 10+</a></li>
+              <li><a href="">Note 8 N950</a></li>
+              <li><a href="">Note 4 N910</a></li>
+            </ul>
+          </li>
+          <li><a href="">Galaxy S-series</a></li>
+          <li><a href="">Galaxy A, E , J-sersies</a></li>
+          <li><a href="">Galaxy model 2018</a></li>
+          <li><a href="">Galaxy model 2017</a></li>
+          <li><a href="">Galaxy model 2016</a></li>
+          <li><a href="">Samsung Smart Watch</a></li>
+          <li><a href="">Galaxy Tab</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="tren">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+        </div>
+        <div class="duoi">
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+          <div class="item">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Vòng đeo tay smart watch hàng nhập khẩu</h4>
+            <div class="price">
+              <p style="color: red">550.000 đ</p>
+              <p style="background-color: red; color: aliceblue">-42%</p>
+            </div>
+            <p>700.000 đ</p>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+    </div>
+    <div class="table">
+      <table>
+        <caption>
+          TÌM UCL VÀ BCNN
+        </caption>
+        <tr>
+          <th>Nhập a :</th>
+          <td><input type="number" id="a" /></td>
+        </tr>
+        <tr>
+          <th>Nhập b :</th>
+          <td><input type="number" id="b" /></td>
+        </tr>
+        <tr>
+          <th>Thông báo kết quả :</th>
+          <td><input type="text" id="kq" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button onclick="UCL()">UCL</button>
+            <button onclick="BCNN()">BCNN</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function ucl(x, y) {
+        while (y !== 0) {
+          let temp = y;
+          y = x % y;
+          x = temp;
+        }
+        return x;
+      }
+      function bcnn(x, y) {
+        return (x * y) / ucl(x, y);
+      }
+      function UCL() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let kq = 0;
+        if (!isNaN(a) && !isNaN(b)) {
+          kq += ucl(a, b);
+        } else {
+          alert(" nhap lai !");
+        }
+        document.getElementById("kq").value =
+          " uoc chung lon nhat cua " + a + " va " + b + " la : " + kq;
+      }
+      function BCNN() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let kql = 0;
+        if (!isNaN(a) && !isNaN(b)) {
+          kql += bcnn(a, b);
+        } else {
+          alert(" nhap lai !");
+        }
+        document.getElementById("kq").value =
+          " uoc chung lon nhat cua " + a + " va " + b + " la : " + kql;
+      }
+    </script>
+  </body>
+</html>

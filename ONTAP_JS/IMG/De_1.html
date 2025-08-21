@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 1500px;
+      }
+      .header img {
+        width: 90px;
+        height: 40px;
+        padding: 10px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .search {
+        width: 700px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .search select {
+        width: 300px;
+        height: 23px;
+      }
+      .search input {
+        width: 300px;
+        height: 20px;
+      }
+      .search img {
+        width: 20px;
+        height: 20px;
+        margin-left: -9px;
+      }
+      .search input ::placeholder,
+      .search select {
+        color: aqua;
+      }
+      .search:hover select {
+        color: red;
+      }
+      .menu {
+        background-color: aquamarine;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+        padding: 10px;
+        position: relative;
+      }
+      .menu ul li a {
+        color: aliceblue;
+        text-decoration: none;
+      }
+      .menu ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        background-color: rgb(154, 154, 75);
+        top: 38px;
+        left: 0;
+        min-width: 200px;
+      }
+      .menu ul li ul.dropdown a {
+        color: red;
+      }
+      .menu ul li:hover ul.dropdown {
+        display: block;
+      }
+      h3 {
+        padding: 10px;
+      }
+      .tren {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item {
+        text-align: center;
+      }
+      .item del {
+        color: brown;
+      }
+      .item img {
+        width: 350px;
+        transition: transform 0.3s ease;
+      }
+      .item:hover img {
+        transform: scale(1.1);
+      }
+      .duoi {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer {
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+      <div class="search">
+        <select>
+          <option value="">Tat ca danh muc</option>
+          <option value="">chon 1</option>
+        </select>
+        <input type="text" placeholder="Tim kiem...." />
+        <div class="but">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+        </div>
+      </div>
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="">NỘI THẤT HÒA PHÁT</a>
+          <ul class="dropdown">
+            <li><a href="">Bàn giám đốc</a></li>
+            <li><a href="">Bàn làm việc</a></li>
+            <li><a href="">Tủ giám đốc Hòa Phát</a></li>
+            <li><a href="">Bàn trưởng phòng Hòa Phát</a></li>
+            <li><a href="">Bàn họp văn phòng</a></li>
+            <li><a href="">Ghế văn phòng Hòa Phát</a></li>
+          </ul>
+        </li>
+        <li><a href="">NỘI THẤT 199</a></li>
+        <li><a href="">NỘI THẤT FAMILY</a></li>
+        <li><a href="">NỘI THẤT XUÂN HÒA</a></li>
+        <li><a href="">NỘI THẤT NHẬP KHẨU</a></li>
+      </ul>
+    </div>
+    <h3>Ghế gấp , ghế nhựa , ghế bar</h3>
+    <div class="content">
+      <div class="tren">
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+      </div>
+      <div class="duoi">
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+        <div class="item">
+          <img src="/BTVN/Bai2/images.jpg" alt="" />
+          <h4>Ghế 112</h4>
+          <p>javkvkdvdkjvn</p>
+          <div class="price">
+            <p>1.200.000</p>
+            <del>1.700.000</del>
+          </div>
+        </div>
+        <!-- end item -->
+      </div>
+    </div>
+    <div class="footer">
+      <div class="one">COPYRIGHT 2020 BY VTC COMPANY</div>
+      <div class="two">MỜI ĐĂNG NHẬP VÀO WEBSITE XIN GỬI VỀ VTC@GMAIL.COM</div>
+    </div>
+    <div>
+      <img src="/BTVN/Bai2/images.jpg" alt="" onclick="hien()" />
+    </div>
+    <script>
+      function hien() {
+        alert("chao mung cac ban da den voi lop thiet ke web !");
+      }
+    </script>
+  </body>
+</html>

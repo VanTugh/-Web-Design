@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        background-color: rgb(89, 164, 218);
+        border: 1px solid black;
+        width: 600px;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,
+      td,
+      tr {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      input {
+        width: 400px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 1500px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .header img {
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+      }
+      .nhom {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        width: 300px;
+      }
+      .search input {
+        width: 600px;
+        height: 20px;
+        margin-top: 10px;
+      }
+      .search {
+        display: flex;
+      }
+      .box {
+        height: 24px;
+        width: 24px;
+        background-color: black;
+        margin-top: 10px;
+      }
+      .menu {
+        background-color: black;
+      }
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu ul li {
+        list-style: none;
+        position: relative;
+
+        padding: 10px;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      .menu ul li ul.dropdown {
+        position: absolute;
+        display: none;
+        background-color: antiquewhite;
+        min-width: 550px;
+        left: 0;
+        top: 38px;
+      }
+      .menu ul li:hover .dropdown {
+        display: block;
+      }
+      .items {
+        display: flex;
+        color: black;
+      }
+      .items img {
+        width: 150px;
+        height: 50px;
+        padding: 10px;
+      }
+      .mota {
+        padding: 10px;
+      }
+      .content {
+        display: flex;
+      }
+      .slide_bar {
+        width: 350px;
+        text-align: center;
+      }
+      .tren,
+      .duoi,
+      .giua {
+        display: flex;
+        justify-content: space-around;
+      }
+      .sp img {
+        width: 100px;
+        padding: 10px;
+      }
+      .one,
+      .two {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+      }
+      .cnn img {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="/BTVN/Bai2/images.jpg" alt="" />
+      <div class="search">
+        <input type="text" placeholder="Nhap ten san pham can tim..." />
+        <div class="box"></div>
+      </div>
+      <div class="nhom">
+        <div class="tt">
+          <img
+            src="/BTVN/Bai2/images.jpg"
+            alt=""
+            class="icon"
+            style="width: 20px; height: 20px"
+          />
+          <p>Thông tin hay</p>
+        </div>
+        <div class="thutien">
+          <img
+            src="/BTVN/Bai2/images.jpg"
+            alt=""
+            class="icon"
+            style="width: 20px; height: 20px"
+          />
+          <p>Thu tiền điện , nước</p>
+        </div>
+        <div class="cart">
+          <img
+            src="/BTVN/Bai2/images.jpg"
+            alt=""
+            class="icon"
+            style="width: 20px; height: 20px"
+          />
+          <p>Giỏ hàng</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="">ĐIỆN THOẠI</a></li>
+        <li><a href="">LAPTOP</a></li>
+        <li><a href="">APPLE</a></li>
+        <li><a href="">PC - LINH KIỆN</a></li>
+        <li>
+          <a href="">PHỤ KIỆN</a>
+          <ul class="dropdown">
+            <li>
+              <a href="">
+                <div class="items">
+                  <img src="/BTVN/Bai2/images.jpg" alt="" />
+                  <div class="mota">
+                    <p>Combo loa bluetooth karaoke 1 value JHG-PIG</p>
+                    <p>Nhựa đen + mic không dây</p>
+                    <p style="color: red">2.790.000 Đ</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="items">
+                  <img src="/BTVN/Bai2/images.jpg" alt="" />
+                  <div class="mota">
+                    <p>Combo loa bluetooth karaoke 1 value JHG-PIG</p>
+                    <p>Nhựa đen + mic không dây</p>
+                    <p style="color: red">2.790.000 Đ</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="">MÁY CŨ GIÁ RẺ</a></li>
+        <li><a href="">HÀNG GIA DỤNG</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="slide_bar">
+        <h3 style="color: aliceblue; background-color: yellow">GALAXY NOTE</h3>
+        <div class="tren">
+          <div class="sp">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Galaxy Note 10+</p>
+          </div>
+          <!-- end of item -->
+          <div class="sp">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Galaxy Note 10+</p>
+          </div>
+          <!-- end of item -->
+        </div>
+        <div class="giua">
+          <div class="sp">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Galaxy Note 10+</p>
+          </div>
+          <!-- end of item -->
+          <div class="sp">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Galaxy Note 10+</p>
+          </div>
+          <!-- end of item -->
+        </div>
+        <div class="duoi">
+          <div class="sp">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Galaxy Note 10+</p>
+          </div>
+          <!-- end of item -->
+          <div class="sp">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <p>Galaxy Note 10+</p>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+      <div class="main">
+        <div class="one">
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+        </div>
+        <div class="two">
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+          <div class="cnn">
+            <img src="/BTVN/Bai2/images.jpg" alt="" />
+            <h4>Tai nghe over AKG Y3000 chính hãng SGYN</h4>
+            <div class="price">
+              <p style="color: red">1.900.000 đ</p>
+              <div class="trong"></div>
+            </div>
+            <del>3.000.000 đ</del>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+    </div>
+    <div class="table">
+      <table>
+        <caption>
+          Sắp chuỗi
+        </caption>
+        <tr>
+          <th>Nhập chuỗi :</th>
+          <td><input type="text" id="chuoi" /></td>
+        </tr>
+        <tr>
+          <th>Thông báo kết quả :</th>
+          <td><input type="text" id="kq" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button onclick="sap()">sap</button>
+            <button onclick="xoa()">xoa</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function sap() {
+        var text = document.getElementById("chuoi").value;
+        var arr = text.split(",");
+        arr.sort(function (a, b) {
+          return a - b;
+        });
+
+        var chan = " ";
+        var le = " ";
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0 && arr[i] != 0) {
+            chan += arr[i] + ",";
+          } else if (arr[i] % 2 != 0 && arr[i] != 0) {
+            le += arr[i] + ",";
+          }
+        }
+        document.getElementById("kq").value = (chan + "0," + le).slice(0, -1);
+      }
+    </script>
+  </body>
+</html>
